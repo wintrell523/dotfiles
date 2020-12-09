@@ -1,8 +1,6 @@
 
 #!/bin/bash
 
-~/init/install-janus.sh
-
 pip install --user powerline-status
 pip install segno # for QR codes using qr function
 
