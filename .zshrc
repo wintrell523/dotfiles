@@ -112,6 +112,8 @@ fi
 alias python=python3
 alias py=python3
 alias start-ubuntu="~/ubuntu-vm/vftool/build/vftool -k ~/ubuntu-vm/kernel -i ~/ubuntu-vm/initrd -d ~/ubuntu-vm/disk.img -m 4096 -a \"root=/dev/vda console=hvc0\" -t 0"
+alias ls='exa -laFh --git'
+alias exa='exa -laFh --git'
 
 # env
 #if [[ -e /usr/libexec/java_home ]]; then
@@ -136,6 +138,31 @@ export GPG_TTY=$(tty)
 
 # export UBUNTU VM as Docker Host
 export DOCKER_HOST=ssh://wintrell@ubuntu
+
+# Write Handy Functions
+function mkcd() {
+  mkdir -p "$@" && cd "$_";
+}
+
+# Ensure Brewfile is only created in ~/.dotfiles directory
+function bbd() {
+
+  local startingDirectory=$PWD;
+
+  if [[ $startingDirectory != $DOTFILES ]]; then
+    echo "Changing to $DOTFILES";
+    cd $DOTFILES;
+  fi
+
+  echo "Dumping Brewfile";
+  brew bundle dump --force --describe;
+
+  if [[ $startingDirectory != $DOTFILES ]]; then
+    echo "Returning to $startingDirectory";
+    cd $startingDirectory;
+  fi
+
+}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/wintrell/.sdkman"
