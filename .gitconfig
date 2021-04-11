@@ -1,0 +1,12 @@
+[commit]
+	gpgsign = true
+[user]
+	name = Honza Urban
+	email = honza@urban-cz.eu
+	signingKey = C23C511D874EB7E3
+[gpg]
+	program = gpg
+[core]
+	excludesfile = /Users/wintrell/.gitignore_global
+[tag]
+	forceSignAnnotated = false
