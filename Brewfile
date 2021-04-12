@@ -7,10 +7,16 @@ tap "homebrew/core"
 brew "python@3.9"
 # Isolated development environments using Docker
 brew "docker-compose"
+# Modern replacement for 'ls'
+brew "exa"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# Mac App Store command-line interface
+brew "mas"
 # Platform built on V8 to build network applications
 brew "node"
 # Implementation of Telnet and SSH
@@ -21,6 +27,8 @@ brew "tig"
 brew "transmission-cli"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Cross platform SQL editor and database management app
@@ -57,3 +65,17 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "1Password 7", id: 1333542190
+mas "Amphetamine", id: 937984704
+mas "HP Easy Scan", id: 967004861
+mas "HP Smart", id: 1474276998
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LastPass", id: 926036361
+mas "Magnet", id: 441258766
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Spark", id: 1176895641
+mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
