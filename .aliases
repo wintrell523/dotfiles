@@ -1,0 +1,10 @@
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias brew='arch -x86_64 brew'
+# alias nano='nano -B -i -m'
+alias python=python3
+alias py=python3
+alias ls='exa -laFh --git'
+alias exa='exa -laFh --git'
+# update alias
+alias update='brew update && brew upgrade && mas upgrade'
