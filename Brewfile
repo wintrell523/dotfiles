@@ -63,6 +63,8 @@ cask "transmission"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Desktop client for WhatsApp
+cask "whatsapp"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password 7", id: 1333542190
