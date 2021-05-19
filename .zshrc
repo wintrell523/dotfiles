@@ -98,24 +98,12 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+# Aliases are now stored in ~/.aliases!
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias brew='arch -x86_64 brew'
-# alias nano='nano -B -i -m'
-alias python=python3
-alias py=python3
-alias ls='exa -laFh --git'
-alias exa='exa -laFh --git'
+if [ -f ~/.aliases ]; then
+	source ~/.aliases
+fi
 
-# update alias
-alias update='brew update && brew upgrade && mas upgrade'
 
 # env
 #if [[ -e /usr/libexec/java_home ]]; then
