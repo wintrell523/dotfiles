@@ -111,9 +111,11 @@ fi
 # alias nano='nano -B -i -m'
 alias python=python3
 alias py=python3
-alias start-ubuntu="~/ubuntu-vm/vftool/build/vftool -k ~/ubuntu-vm/kernel -i ~/ubuntu-vm/initrd -d ~/ubuntu-vm/disk.img -m 4096 -a \"root=/dev/vda console=hvc0\" -t 0"
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
+
+# update alias
+alias update='brew update && brew upgrade && mas upgrade'
 
 # env
 #if [[ -e /usr/libexec/java_home ]]; then
@@ -136,8 +138,12 @@ export TF_VAR_pvt_key="~/.ssh/terraform"
 # because of https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
+# Docker on UBUNUTU VM (see https://medium.com/carvago-development/my-docker-on-macos-part-1-setup-ubuntu-virtual-machine-both-intel-and-apple-silicon-cpu-5d886af0e~ba)
 # export UBUNTU VM as Docker Host
-export DOCKER_HOST=ssh://wintrell@ubuntu
+# export DOCKER_HOST=ssh://wintrell@ubuntu
+# alias start-ubuntu="~/ubuntu-vm/vftool/build/vftool -k ~/ubuntu-vm/kernel -i ~/ubuntu-vm/initrd -d ~/ubuntu-vm/disk.img -m 4096 -a \"root=/dev    /vda console=hvc0\" -t 0"
+
+export DOTFILES="$HOME/.dotfiles"
 
 # Write Handy Functions
 function mkcd() {
