@@ -10,3 +10,5 @@
 	excludesfile = /Users/wintrell/.gitignore_global
 [tag]
 	forceSignAnnotated = false
+[pull]
+	ff = only
