@@ -37,7 +37,7 @@ cask "beekeeper-studio"
 cask "brave-browser"
 # E-books management software
 cask "calibre"
-# Free universal database tool and SQL client
+# Universal database tool and SQL client
 cask "dbeaver-community"
 cask "font-fira-code"
 # Web browser
@@ -50,7 +50,7 @@ cask "iterm2"
 cask "jellybeansoup-netflix"
 # Kubernetes IDE
 cask "lens"
-# Free and open-source IDE for Python programming - Community Edition
+# IDE for Python programming - Community Edition
 cask "pycharm-ce"
 # Team communication and collaboration software
 cask "slack"
@@ -65,8 +65,6 @@ cask "visual-studio-code"
 cask "vlc"
 # Desktop client for WhatsApp
 cask "whatsapp"
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
 mas "HP Easy Scan", id: 967004861
