@@ -5,6 +5,7 @@ CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
 donjayamanne.python-extension-pack
 eamodio.gitlens
+EditorConfig.EditorConfig
 eriklynd.json-tools
 esbenp.prettier-vscode
 felipecaputo.git-project-manager
@@ -18,10 +19,19 @@ michelemelluso.gitignore
 monokai.theme-monokai-pro-vscode
 ms-azuretools.vscode-docker
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode-remote.remote-containers
+redhat.java
+redhat.vscode-commons
 redhat.vscode-yaml
+Shelex.vscode-cy-helper
 Stalinbalraj.timestamp-converter
 VisualStudioExptTeam.vscodeintellicode
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
 vscode-icons-team.vscode-icons
 wholroyd.jinja
