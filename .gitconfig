@@ -4,6 +4,7 @@
 	signingKey = C23C511D874EB7E3
 [commit]
 	gpgsign = true
+	template = /Users/wintrell/.gitmessage.txt
 [gpg]
 	program = gpg
 [core]
@@ -12,6 +13,7 @@
 	safecrlf = false
 	# must be absolute path
 	excludesfile = /Users/wintrell/.gitignore_global
+	editor = vim
 [alias]
 	f = fetch
 	# updates your branch with upstream (if fast-forward is possible)
