@@ -3,16 +3,14 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
-# Isolated development environments using Docker
-brew "docker-compose"
 # Modern replacement for 'ls'
 brew "exa"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Mac App Store command-line interface
@@ -31,6 +29,8 @@ brew "youtube-dl"
 brew "zsh"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Application launcher and productivity software
+cask "alfred"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Web browser focusing on privacy
@@ -39,6 +39,12 @@ cask "brave-browser"
 cask "calibre"
 # Universal database tool and SQL client
 cask "dbeaver-community"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Collaborative team software
+cask "figma"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
@@ -50,11 +56,14 @@ cask "iterm2"
 cask "jellybeansoup-netflix"
 # Kubernetes IDE
 cask "lens"
+# Collaboration platform for API development
+cask "postman"
 # IDE for Python programming - Community Edition
 cask "pycharm-ce"
 # Team communication and collaboration software
 cask "slack"
-cask "spotify-now-playing"
+# Music streaming service
+cask "spotify"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Open-source BitTorrent client
