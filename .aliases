@@ -8,3 +8,23 @@ alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
 # update alias
 alias update='brew update && brew upgrade && mas upgrade'
+
+alias y=yarn
+
+# GIT shortcuts
+alias gf='git fetch'
+alias gcm='git commit -m'
+alias gc='git commit'
+alias gaa='git add .'
+alias ga='git add'
+alias gst='git status'
+alias gp='git pull'
+alias gpf='git push -f'
+alias gfr='git fetch && git rebase -i origin/master'
+alias gfpr='git fetch && git pull && git rebase -i origin/master'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gsw='git switch'
+alias gun='git reset HEAD~1 --mixed'
+alias gdel='git branch -D'
+alias glg='git log --pretty=format:"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]" --abbrev-commit -30'
+alias gbr='git branch --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]" --sort=-committerdate'
