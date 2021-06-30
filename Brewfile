@@ -23,6 +23,8 @@ brew "putty"
 brew "tig"
 # Lightweight BitTorrent client
 brew "transmission-cli"
+# JavaScript package manager
+brew "yarn", link: false
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # UNIX shell (command interpreter)
@@ -31,6 +33,8 @@ brew "zsh"
 cask "1password"
 # Application launcher and productivity software
 cask "alfred"
+# Application uninstaller
+cask "appcleaner"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
 # Web browser focusing on privacy
