@@ -41,6 +41,8 @@ cask "beekeeper-studio"
 cask "brave-browser"
 # E-books management software
 cask "calibre"
+# Allows switching between application windows
+cask "contexts"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Voice and text chat software
@@ -52,8 +54,6 @@ cask "figma"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
-# IDE for Java development - community edition
-cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Third-party app to use Netflix outside the browser
