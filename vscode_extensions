@@ -1,7 +1,7 @@
 andrew-codes.cypress-snippets
 batisteo.vscode-django
 codezombiech.gitignore
-CoenraadS.bracket-pair-colorizer
+CoenraadS.bracket-pair-colorizer-2
 dakara.dakara-foldplus
 DavidAnson.vscode-markdownlint
 donjayamanne.python-extension-pack
@@ -24,9 +24,11 @@ ms-toolsai.jupyter
 ms-vscode-remote.remote-containers
 redhat.java
 redhat.vscode-yaml
+Shan.code-settings-sync
 Shelex.vscode-cy-helper
 spoonscen.es6-mocha-snippets
 Stalinbalraj.timestamp-converter
+vinliao.fast-arrow
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
