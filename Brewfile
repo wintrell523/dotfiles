@@ -47,8 +47,6 @@ cask "contexts"
 cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Collaborative team software
 cask "figma"
 cask "font-fira-code"
