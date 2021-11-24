@@ -7,7 +7,7 @@ alias py=python3
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
 # update alias
-alias update='brew update && brew upgrade && mas upgrade'
+alias update='brew update && brew upgrade && brew upgrade --cask && mas upgrade'
 
 alias y=yarn
 
