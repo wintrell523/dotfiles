@@ -1,9 +1,12 @@
+aaron-bond.better-comments
 andrew-codes.cypress-snippets
 batisteo.vscode-django
+christian-kohler.path-intellisense
 codezombiech.gitignore
 CoenraadS.bracket-pair-colorizer-2
 dakara.dakara-foldplus
 DavidAnson.vscode-markdownlint
+donjayamanne.python-environment-manager
 donjayamanne.python-extension-pack
 eamodio.gitlens
 EditorConfig.EditorConfig
@@ -14,6 +17,7 @@ formulahendry.code-runner
 Gruntfuggly.todo-tree
 HaaLeo.timing
 janisdd.vscode-edit-csv
+KevinRose.vsc-python-indent
 magicstack.MagicPython
 mechatroner.rainbow-csv
 michelemelluso.gitignore
@@ -21,7 +25,10 @@ monokai.theme-monokai-pro-vscode
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
+njpwerner.autodocstring
 redhat.java
 redhat.vscode-yaml
 Shan.code-settings-sync
