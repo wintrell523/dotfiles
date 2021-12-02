@@ -15,18 +15,16 @@ brew "kubernetes-cli"
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Platform built on V8 to build network applications
-brew "node"
+brew "node@16"
 # Implementation of Telnet and SSH
 brew "putty"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Text interface for Git repositories
 brew "tig"
 # Lightweight BitTorrent client
 brew "transmission-cli"
-# JavaScript package manager
-brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # UNIX shell (command interpreter)
