@@ -1,4 +1,4 @@
-## Steps to bootstrap a new Mac
+# Steps to bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
@@ -16,35 +16,31 @@ git clone git@github.com:wintrell523/my_dotfiles.git ~/.dotfiles
 git clone https://github.com/wintrell523/my_dotfiles.git ~/.dotfiles
 ```
 
-3. Create symlinks in the Home directory to the real files in the repo.
+3. Install Homebrew, followed by the software listed in the Brewfile.
 
 ```zsh
-# There are better and less manual ways to do this;
-# investigate install scripts and bootstrapping tools.
-
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.editorconfig ~/.editorconfig
-ln -s ~/.dotfiles/.aliases ~/.aliases
-ln -s ~/.dotfiles/.bashrc ~/.bashrc
-```
-
-4. Install Homebrew, followed by the software listed in the Brewfile.
-
-```zsh
-# These could also be in an install script.
-
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Then pass in the Brewfile location...
-brew bundle --file ~/.dotfiles/Brewfile
-
-# ...or move to the directory first.
-cd ~/.dotfiles && brew bundle
 ```
+
+4. Run dotbot install script
+
+```zsh
+cd ~/.dotfiles
+chmod +x install
+./install
+```
+
+---
+
+## Running install only to link new dotfiles
+
+```zsh
+cd ~/.dotfiles
+./install --only link
+```
+
+---
 
 ## TODO List
 
