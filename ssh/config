@@ -1,0 +1,18 @@
+# Global config
+Host *
+	UseKeychain yes
+	AddKeysToAgent yes
+	IdentityFile ~/.ssh/id_ed25519
+
+# HomeCredit GitLab
+Host git.homecredit.net
+	Preferredauthentications publickey
+	IdentityFile ~/.ssh/hc_ext
+
+# HomeCredit app servers
+Host *.infra
+	IdentityFile ~/.ssh/hc_jmeter_key.pem
+
+# Carvago GitLab
+Host gitlab.carvago.com
+	IdentityFile ~/.ssh/carvago

@@ -21,6 +21,8 @@ brew "node@16"
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Text interface for Git repositories
 brew "tig"
 # Lightweight BitTorrent client
@@ -31,6 +33,8 @@ brew "youtube-dl"
 brew "zsh"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller

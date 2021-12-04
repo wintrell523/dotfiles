@@ -1,0 +1,26 @@
+# install.conf.yaml
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    # Shell stuff
+    ~/.aliases: shell/.aliases
+    # ~/.functions: shell/.functions
+    ~/.zshrc: shell/.zshrc
+    ~/.vimrc: shell/.vimrc
+    ~/.p10k.zsh: shell/.p10k.zsh
+    # Node
+    ~/.npmrc: node/.npmrc
+    ~/.yarnrc: node/.yarnrc
+    # SSH
+    ~/.ssh/config: ssh/config
+    # Git
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+    # Apps
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
