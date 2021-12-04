@@ -28,3 +28,7 @@
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
+
+- vscodefile:
+    file: vscode_extensions
+    insiders: false
