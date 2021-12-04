@@ -2,34 +2,34 @@
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
-```zsh
-xcode-select --install
-```
+    ```zsh
+    xcode-select --install
+    ```
 
 2. Clone repo into new hidden directory.
 
-```zsh
-# Use SSH (if set up)...
-git clone git@github.com:wintrell523/my_dotfiles.git ~/.dotfiles
+    ```zsh
+    # Use SSH (if set up)...
+    git clone git@github.com:wintrell523/my_dotfiles.git ~/.dotfiles
 
-# ...or use HTTPS and switch remotes later.
-git clone https://github.com/wintrell523/my_dotfiles.git ~/.dotfiles
-```
+    # ...or use HTTPS and switch remotes later.
+    git clone https://github.com/wintrell523/my_dotfiles.git ~/.dotfiles
+    ```
 
 3. Install Homebrew, followed by the software listed in the Brewfile.
 
-```zsh
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+    ```zsh
+    # Install Homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
 
 4. Run dotbot install script
 
-```zsh
-cd ~/.dotfiles
-chmod +x install
-./install
-```
+    ```zsh
+    cd ~/.dotfiles
+    chmod +x install
+    ./install
+    ```
 
 ---
 
