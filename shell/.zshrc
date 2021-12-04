@@ -153,6 +153,10 @@ function bbd() {
 
 }
 
+# THEFUCK alias
+# https://github.com/nvbn/thefuck
+eval "$(thefuck --alias)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/wintrell/.sdkman"
 [[ -s "/Users/wintrell/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/wintrell/.sdkman/bin/sdkman-init.sh"
