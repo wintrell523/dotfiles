@@ -1,6 +1,3 @@
-# Antigen
-[[ -f ~/.zsh/.antigen.zsh ]] && source ~/.zsh/.antigen.zsh
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,21 +5,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Source other files
-[[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
-[[ -f ~/.zsh/.functions ]] && source ~/.zsh/.functions
 
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.zsh/{path,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+export ZSH="/Users/wintrell/.oh-my-zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages)
+# plugins=(git zsh-autosuggestions common-aliases colored-man-pages)
+
+source $ZSH/oh-my-zsh.sh
+
 
 # THEFUCK alias
 # https://github.com/nvbn/thefuck
 eval "$(thefuck --alias)"
+
+HIST_STAMPS="dd.mm.yyyy"
 
 # PGP config
 # because of https://github.com/keybase/keybase-issues/issues/2798
@@ -43,9 +44,14 @@ export TF_VAR_do_token=e4f37a7a84103f506f9a8b217fdbe83441876e415e01b4c697f4f8ed0
 export TF_VAR_pvt_key="~/.ssh/terraform"
 
 
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+# Source other files
+[[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
+[[ -f ~/.zsh/.functions ]] && source ~/.zsh/.functions
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/wintrell/.sdkman"
