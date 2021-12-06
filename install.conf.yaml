@@ -5,13 +5,18 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/.zsh
+
 - link:
     # Shell stuff
-    ~/.aliases: shell/.aliases
+    ~/.zsh/.aliases: shell/.zsh/.aliases
+    ~/.zsh/.functions: shell/.zsh/.functions
+    ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zsh/.antigen.zsh: shell/.zsh/.antigen.zsh
     # ~/.functions: shell/.functions
     ~/.zshrc: shell/.zshrc
     ~/.vimrc: shell/.vimrc
-    ~/.p10k.zsh: shell/.p10k.zsh
     # Node
     ~/.npmrc: node/.npmrc
     ~/.yarnrc: node/.yarnrc

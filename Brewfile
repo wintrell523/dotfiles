@@ -3,6 +3,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
 # Modern replacement for 'ls'
 brew "exa"
 # Improved top (interactive process viewer)
