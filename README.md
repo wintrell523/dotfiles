@@ -16,14 +16,20 @@
     git clone https://github.com/wintrell523/my_dotfiles.git ~/.dotfiles
     ```
 
-3. Install Homebrew, followed by the software listed in the Brewfile.
+3. Install Homebrew.
 
     ```zsh
     # Install Homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
-4. Run dotbot install script
+4. Install Oh-My-ZSH
+
+    ```zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+
+5. Run dotbot install script
 
     ```zsh
     cd ~/.dotfiles
