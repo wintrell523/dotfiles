@@ -25,4 +25,4 @@ function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
-function gnbp() { git checkout -b "$1"; git --set-upstream-to=origin/master "$1"; }
+function gnbp() { git checkout -b "$1"; git push --set-upstream origin "$1"; }
