@@ -3,6 +3,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
 # Improved top (interactive process viewer)
@@ -27,6 +29,8 @@ brew "thefuck"
 brew "tig"
 # Lightweight BitTorrent client
 brew "transmission-cli"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # UNIX shell (command interpreter)
