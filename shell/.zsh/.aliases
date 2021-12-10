@@ -1,4 +1,4 @@
-# alias zshconfig="mate ~/.zshrc"
+alias zshrc="code ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias brew='arch -x86_64 brew'
 # alias nano='nano -B -i -m'
@@ -6,10 +6,24 @@ alias python=python3
 alias py=python3
 alias ls='exa -laFh --git'
 alias exa='exa -laFh --git'
+alias cat='bat'
 # update alias
 alias update='brew update && brew upgrade && brew upgrade --cask && mas upgrade'
 
 alias y=yarn
+
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+
+alias cdfe='cd ~/work_projects/Teas/frontend'
+alias cdfem='cd ~/work_projects/Teas/frontend-monorepo'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
 
 # GIT shortcuts
 alias gf='git fetch -p'
@@ -27,11 +41,19 @@ alias gpsup='git push --set-upstream origin $(git_current_branch)'
 alias gsw='git switch'
 alias gun='git reset HEAD~1 --mixed'
 alias gdel='git branch -D $1'
-alias glg='git log --pretty=format:"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]" --abbrev-commit -30'
+alias glg='git log --graph --pretty=format:"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]" --abbrev-commit -30'
 alias gbr='git branch --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]" --sort=-committerdate'
 alias gnb='git checkout -b $1'
+alias gcp='git cherry-pick'
 
 
+# Tree
+if [ ! -x "$(which tree 2>/dev/null)" ]
+then
+  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+fi
+
+alias mkdir='mkdir -p $1'
 
 # Kubernetes
 alias k=kubectl
