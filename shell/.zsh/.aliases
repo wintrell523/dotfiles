@@ -10,6 +10,8 @@ alias cat='bat'
 # update alias
 alias update='brew update && brew upgrade && brew upgrade --cask && mas upgrade'
 
+alias cls='clear'
+
 alias y=yarn
 
 alias ..='cd ..'         # Go up one directory
