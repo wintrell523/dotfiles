@@ -21,9 +21,7 @@ function bbd() {
 }
 
 # Write Handy Functions
-function mkcd() {
-  mkdir -p "$@" && cd "$_";
-}
+function mkcd() { mkdir "$@" && cd "$@"; }
 
 function fs() {
 	if du -b /dev/null > /dev/null 2>&1; then
