@@ -13,7 +13,6 @@
     ~/.zsh/.aliases: shell/.zsh/.aliases
     ~/.zsh/.functions: shell/.zsh/.functions
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
-    ~/.zsh/.antigen.zsh: shell/.zsh/.antigen.zsh
     # ~/.functions: shell/.functions
     ~/.zshrc: shell/.zshrc
     ~/.vimrc: shell/.vimrc
@@ -25,7 +24,9 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
-    # Apps
+    # VSC
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code/User/snippets/cypress_snippets.code-snippets: vscode/snippets/cypress_snippets.code-snippets
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

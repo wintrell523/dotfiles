@@ -1,0 +1,88 @@
+{
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.fontFamily": "'fira code'",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitProjectManager.baseProjectsFolders": [
+    "~/Projects/",
+    "~/JMeter/apache-jmeter",
+    "~/work_projects/"
+  ],
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "gitlens.defaultTimeFormat": "HH:mm",
+  "gitlens.defaultDateShortFormat": "DD.MM.YY",
+  "gitlens.defaultDateFormat": "DD.MM.YYYY HH:mm",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}${separator}${appName}",
+  "workbench.editor.highlightModifiedTabs": true,
+  "[git-commit]": { "editor.rulers": [40] },
+  "[javascript]": { "editor.rulers": [80] },
+  "[typescript]": { "editor.rulers": [80] },
+  "[python]": {
+    "editor.rulers": [79, 120]
+  },
+  "editor.rulers": [120],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "git-rebase-todo": "gitlens.rebase"
+  },
+  "python.languageServer": "Default",
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "files.associations": {
+    "*.html": "html"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["cypress.json"],
+      "url": "https://on.cypress.io/cypress.schema.json"
+    }
+  ],
+  "redhat.telemetry.enabled": false,
+  "cypressHelper.commandForOpen": "yarn cy:open:dev",
+  "cypressHelper.commandForRun": "yarn cy:run:dev",
+  "cypressHelper.menuItems": {
+    "OpenCypress": false,
+    "RunCypress": true,
+    "GenerateCustomCommandTypes": false,
+    "GoToCustomCommand": false,
+    "FindCustomCommandReferences": false,
+    "FindStepDefinitionReferences": false,
+    "SchemaGenerator": false,
+    "ParseHAR": false,
+    "mockAutocomplete": false
+  },
+  "terminal.explorerKind": "external",
+  "editor.foldingStrategy": "indentation",
+  "sync.gist": "4c85860fb1ed970a22fcb42d32760dce",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorBlinking": "expand",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.suggest.paths": true,
+  "javascript.suggest.paths": true,
+  "tabnine.experimentalAutoImports": true,
+  "workbench.productIconTheme": "el-vsc-v1-icons"
+}
