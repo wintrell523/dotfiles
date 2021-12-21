@@ -11,8 +11,12 @@ Host git.homecredit.net
 
 # HomeCredit app servers
 Host *.infra
+	Preferredauthentications publickey
 	IdentityFile ~/.ssh/hc_jmeter_key.pem
 
 # Carvago GitLab
-Host gitlab.carvago.com
+Host gitlab.eag.guru
+	Preferredauthentications publickey
+	AddKeysToAgent yes
+	UseKeychain yes
 	IdentityFile ~/.ssh/carvago
