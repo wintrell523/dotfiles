@@ -50,6 +50,7 @@
 	wip = !git add --all && git commit -m WIP
 [diff]
 	mnemonicprefix = true
+	tool = vscode
 [pull]
 	rebase = true
 [push]
@@ -70,3 +71,5 @@
 	changed = red bold
 	untracked = cyan
 	branch = yellow black bold ul
+[difftool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"

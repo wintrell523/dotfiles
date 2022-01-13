@@ -1,17 +1,11 @@
 {
   "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
-  "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.fontFamily": "'fira code'",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "gitProjectManager.baseProjectsFolders": [
-    "~/Projects/",
-    "~/JMeter/apache-jmeter",
-    "~/work_projects/"
-  ],
+  "gitProjectManager.baseProjectsFolders": ["~/Projects/", "~/work_projects/"],
   "[json]": {
     "editor.quickSuggestions": {
       "strings": true
@@ -83,6 +77,10 @@
   "typescript.inlayHints.parameterNames.enabled": "literals",
   "typescript.suggest.paths": true,
   "javascript.suggest.paths": true,
-  "tabnine.experimentalAutoImports": true,
-  "workbench.productIconTheme": "el-vsc-v1-icons"
+  "workbench.productIconTheme": "el-vsc-v1-icons",
+  "editor.bracketPairColorization.enabled": true,
+  "json.maxItemsComputed": 10000,
+  "faker.locale": "cz",
+  "workbench.editor.enablePreview": false,
+  "vsicons.dontShowNewVersionMessage": true
 }

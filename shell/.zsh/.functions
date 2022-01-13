@@ -44,7 +44,18 @@ function tre() {
 	tree -aC -I '.git|node_modules|.yarn' --dirsfirst "$@" | less -FRNX;
 }
 
+# Git functions
+
+# Create new branch and set the upstream
 function gnbp() { git checkout -b "$1"; git push --set-upstream origin "$1"; }
+
+# (Un)Stash changes with an alias
+function gsp() {
+    git stash push -m "zsh_stash_name_$1"
+}
+function gsa() {
+    git stash apply $(git stash list | grep "zsh_stash_name_$1" | cut -d: -f1)
+}
 
 encr()
 {
