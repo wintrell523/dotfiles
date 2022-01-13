@@ -38,13 +38,12 @@ export EDITOR=vim
 export PATH=$PATH:/Users/wintrell/scripts
 export PATH=$PATH:/opt/homebrew/bin/brew
 export PATH=$PATH:~/opt/terraform
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # DigitalOcen token
 export TF_VAR_do_token=e4f37a7a84103f506f9a8b217fdbe83441876e415e01b4c697f4f8ed057066d6
 export TF_VAR_pvt_key="~/.ssh/terraform"
 
-
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # Source other files
 [[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases

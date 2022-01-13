@@ -60,16 +60,22 @@ cask "figma"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
+# Web browser
+cask "google-chrome-canary"
 # Free and open-source media player
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Third-party app to use Netflix outside the browser
 cask "jellybeansoup-netflix"
+# End-to-end encryption software
+cask "keybase"
 # Kubernetes IDE
 cask "lens"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
 # IDE for Python programming - Community Edition
@@ -88,15 +94,13 @@ cask "visual-studio-code"
 cask "whatsapp"
 mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
-mas "hlidac shopu", id: 1488295734
-mas "HP Easy Scan", id: 967004861
+mas "Hlídač Shopů", id: 1488295734
 mas "HP Smart", id: 1474276998
 mas "iMovie", id: 408981434
-mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
-mas "LastPass", id: 926036361
 mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
+mas "MoneyWiz", id: 1511185140
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PiPer", id: 1421915518
