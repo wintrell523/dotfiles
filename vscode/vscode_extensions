@@ -26,9 +26,14 @@ magicstack.MagicPython
 mechatroner.rainbow-csv
 michelemelluso.gitignore
 monokai.theme-monokai-pro-vscode
+ms-playwright.playwright
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
+ms-vscode-remote.vscode-remote-extensionpack
 ms-vsliveshare.vsliveshare
 njpwerner.autodocstring
 PKief.material-icon-theme
@@ -37,7 +42,6 @@ Shan.code-settings-sync
 Shelex.vscode-cy-helper
 spoonscen.es6-mocha-snippets
 Stalinbalraj.timestamp-converter
-TabNine.tabnine-vscode
 vinliao.fast-arrow
 vscode-icons-team.vscode-icons
 yzhang.markdown-all-in-one
