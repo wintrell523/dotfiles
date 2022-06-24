@@ -31,6 +31,8 @@ brew "tig"
 brew "transmission-cli"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Library to create, extract, and modify Windows Imaging files
+brew "wimlib"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # UNIX shell (command interpreter)
@@ -90,6 +92,8 @@ cask "telegram"
 cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"
 # Desktop client for WhatsApp
 cask "whatsapp"
 mas "1Password 7", id: 1333542190

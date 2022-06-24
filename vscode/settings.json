@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
   "editor.suggestSelection": "first",
   "editor.fontFamily": "'fira code'",
   "editor.fontSize": 14,
@@ -82,5 +81,6 @@
   "json.maxItemsComputed": 10000,
   "faker.locale": "cz",
   "workbench.editor.enablePreview": false,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)"
 }
