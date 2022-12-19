@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-export ZSH="/Users/wintrell/.oh-my-zsh"
+export ZSH="/Users/jan.urban/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -31,19 +31,22 @@ export GPG_TTY=$(tty)
 
 export EDITOR=vim
 
+export LT_USERNAME="***REMOVED***"
+export LT_ACCESS_KEY="***REMOVED***"
+export BROWSER_STACK_USERNAME="***REMOVED***"
+export BROWSER_STACK_ACCESS_KEY="***REMOVED***"
+# empty BrowserStack vars because of script generator
+export BROWSER_STACK_USERNAME="asd"
+export BROWSER_STACK_ACCESS_KEY="asd"
+export E2E_API_PUBLIC_KEY="***REMOVED***"
+export E2E_API_SECRET="***REMOVED***"
+
 # export PATH
 # gradle and maven managed by sdkman
 # export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
 # export PATH=$PATH:/opt/gradle/gradle-6.8.1/bin
-export PATH=$PATH:/Users/wintrell/scripts
 export PATH=$PATH:/opt/homebrew/bin/brew
-export PATH=$PATH:~/opt/terraform
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-# DigitalOcen token
-export TF_VAR_do_token=e4f37a7a84103f506f9a8b217fdbe83441876e415e01b4c697f4f8ed057066d6
-export TF_VAR_pvt_key="~/.ssh/terraform"
-
 
 # Source other files
 [[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
@@ -52,6 +55,3 @@ export TF_VAR_pvt_key="~/.ssh/terraform"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/wintrell/.sdkman"
-[[ -s "/Users/wintrell/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/wintrell/.sdkman/bin/sdkman-init.sh"
