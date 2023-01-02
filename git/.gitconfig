@@ -1,11 +1,9 @@
 [includeIf "gitdir:~/work_projects/"]
-	path = .gitconfig-bloomreach
+	path = ~/.bloomreach.gitconfig
 [includeIf "gitdir:~/Projects/"]
-	path = .gitconfig-personal
-[user]
-	name = Honza Urban
-	email = honza@urban-cz.eu
-	signingkey = C23C511D874EB7E3
+	path = ~/.personal.gitconfig
+[includeIf "gitdir:~/.dotfiles/"]
+	path = ~/.personal.gitconfig
 [commit]
 	gpgsign = true
 [gpg]
