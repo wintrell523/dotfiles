@@ -1,4 +1,5 @@
-alias zshrc="code ~/.zshrc"
+alias zshrc='code ~/.zshrc'
+alias szshrc='source ~/.zshrc'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias brew='arch -x86_64 brew'
 # alias nano='nano -B -i -m'
@@ -51,6 +52,11 @@ alias gsh='git stash'
 alias gsp='git stash pop'
 alias gca='git commit --amend'
 
+# BR - SDK aliases
+alias preview='npm run preview:serve:dev'
+alias tschr='npm run e2e:cloud:chrome -- --spec $1'
+alias tsall='npm run e2e:cloud:all -- --spec $1'
+alias tschrall='npm run e2e:cloud:chrome'
 
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
