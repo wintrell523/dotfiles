@@ -1,9 +1,9 @@
 [includeIf "gitdir:~/work_projects/"]
-	path = ~/.bloomreach.gitconfig
+	path = ~/.dotfiles/git/.bloomreach.gitconfig
 [includeIf "gitdir:~/Projects/"]
-	path = ~/.personal.gitconfig
+	path = ~/.dotfiles/git/.personal.gitconfig
 [includeIf "gitdir:~/.dotfiles/"]
-	path = ~/.personal.gitconfig
+	path = ~/.dotfiles/git/.personal.gitconfig
 [commit]
 	gpgsign = true
 [gpg]
