@@ -1,22 +1,14 @@
-# Global config
+Include /Users/jan.urban/.colima/ssh_config
+
+# Personal
 Host *
-	UseKeychain yes
 	AddKeysToAgent yes
+	UseKeychain yes
 	IdentityFile ~/.ssh/id_ed25519
-
-# HomeCredit GitLab
-Host git.homecredit.net
-	Preferredauthentications publickey
-	IdentityFile ~/.ssh/hc_ext
-
-# HomeCredit app servers
-Host *.infra
-	Preferredauthentications publickey
-	IdentityFile ~/.ssh/hc_jmeter_key.pem
-
-# Carvago GitLab
-Host gitlab.eag.guru
-	Preferredauthentications publickey
+	
+# Bloomreach	
+Host gitlab.exponea.com
 	AddKeysToAgent yes
 	UseKeychain yes
-	IdentityFile ~/.ssh/carvago
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/bloomreach

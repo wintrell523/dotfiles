@@ -35,18 +35,18 @@ export LT_USERNAME="***REMOVED***"
 export LT_ACCESS_KEY="***REMOVED***"
 export BROWSER_STACK_USERNAME="***REMOVED***"
 export BROWSER_STACK_ACCESS_KEY="***REMOVED***"
-# empty BrowserStack vars because of script generator
-export BROWSER_STACK_USERNAME="asd"
-export BROWSER_STACK_ACCESS_KEY="asd"
 export E2E_API_PUBLIC_KEY="***REMOVED***"
 export E2E_API_SECRET="***REMOVED***"
+export E2E_EXPERIMENTS_API_PUBLIC_KEY="***REMOVED***"
+export E2E_EXPERIMENTS_API_SECRET="***REMOVED***"
+export OPENAI_API_KEY="sk-***REMOVED***"
 
 # export PATH
 # gradle and maven managed by sdkman
 # export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
 # export PATH=$PATH:/opt/gradle/gradle-6.8.1/bin
 export PATH=$PATH:/opt/homebrew/bin/brew
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # Source other files
 [[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases

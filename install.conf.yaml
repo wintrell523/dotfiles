@@ -13,9 +13,9 @@
     ~/.zsh/.aliases: shell/.zsh/.aliases
     ~/.zsh/.functions: shell/.zsh/.functions
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
-    # ~/.functions: shell/.functions
     ~/.zshrc: shell/.zshrc
     ~/.vimrc: shell/.vimrc
+    ~/.netrc: shell/.netrc
     # Node
     ~/.npmrc: node/.npmrc
     ~/.yarnrc: node/.yarnrc
