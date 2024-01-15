@@ -19,8 +19,6 @@ brew "htop"
 brew "k6"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Mac App Store command-line interface
@@ -31,6 +29,8 @@ brew "node@18"
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Text interface for Git repositories
@@ -53,6 +53,8 @@ cask "contexts"
 cask "discord"
 # Collaborative team software
 cask "figma"
+# Utility for customizing which browser to start
+cask "finicky"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Free and open-source media player
@@ -87,11 +89,10 @@ mas "Hidden Bar", id: 1452453066
 mas "HP Easy Scan", id: 967004861
 mas "HP Smart", id: 1474276998
 mas "Keynote", id: 409183694
-mas "Meeter", id: 1510445899
 mas "MoneyWiz", id: 1511185140
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Twingate", id: 1501592214
+mas "Structured", id: 1499198946
 mas "Usage", id: 1561788435
 mas "Wipr", id: 1320666476
 vscode "aaron-bond.better-comments"
