@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
+tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -13,12 +14,16 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Modern replacement for 'ls'
 brew "exa"
+# Distributed revision control system
+brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Small memory footprint, flexible web-server
+brew "lighttpd", restart_service: true
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Mac App Store command-line interface
