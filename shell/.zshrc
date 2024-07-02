@@ -18,11 +18,6 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-
 
 source $ZSH/oh-my-zsh.sh
 
-
-# THEFUCK alias
-# https://github.com/nvbn/thefuck
-eval "$(thefuck --alias)"
-
 HIST_STAMPS="dd.mm.yyyy"
 
 # PGP config
@@ -40,6 +35,7 @@ export E2E_API_SECRET="***REMOVED***"
 export E2E_EXPERIMENTS_API_PUBLIC_KEY="***REMOVED***"
 export E2E_EXPERIMENTS_API_SECRET="***REMOVED***"
 export OPENAI_API_KEY="sk-***REMOVED***"
+export GITLAB_SDK_KEY="***REMOVED***"
 
 # export PATH
 # gradle and maven managed by sdkman
