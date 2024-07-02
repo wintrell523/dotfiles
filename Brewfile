@@ -14,8 +14,8 @@ brew "docker"
 brew "docker-compose"
 # Platform keystore credential helper for Docker
 brew "docker-credential-helper"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
@@ -38,8 +38,6 @@ brew "putty"
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Text interface for Git repositories
 brew "tig"
 # Display directories as trees (with optional color/HTML output)
@@ -62,7 +60,6 @@ cask "discord"
 cask "figma"
 # Utility for customizing which browser to start
 cask "finicky"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Free and open-source media player
 cask "iina"
@@ -74,12 +71,10 @@ cask "keka"
 cask "lens"
 # Web browser
 cask "microsoft-edge"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
 # Collaboration platform for API development
 cask "postman"
-# IDE for Python programming - Community Edition
-cask "pycharm-ce"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Screenshot measurement and annotation tool
@@ -92,23 +87,26 @@ cask "spotify"
 cask "telegram"
 # Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "HP Easy Scan", id: 967004861
 mas "HP Smart", id: 1474276998
 mas "Keynote", id: 409183694
-mas "MoneyWiz", id: 1511185140
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Structured", id: 1499198946
 mas "Usage", id: 1561788435
 mas "Wipr", id: 1320666476
 vscode "aaron-bond.better-comments"
-vscode "albert.TabOut"
+vscode "activitywatch.aw-watcher-vscode"
+vscode "albert.tabout"
 vscode "andrew-codes.cypress-snippets"
 vscode "attilabuti.mustache-syntax-vscode"
 vscode "codezombiech.gitignore"
+vscode "d-biehl.robotcode"
 vscode "dakara.dakara-foldplus"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-faker"
@@ -116,8 +114,8 @@ vscode "donjayamanne.python-environment-manager"
 vscode "donjayamanne.python-extension-pack"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
-vscode "ElAnandKumar.el-vsc-product-icon-theme"
+vscode "editorconfig.editorconfig"
+vscode "elanandkumar.el-vsc-product-icon-theme"
 vscode "eriklynd.json-tools"
 vscode "esbenp.prettier-vscode"
 vscode "felipecaputo.git-project-manager"
@@ -125,17 +123,18 @@ vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "golang.go"
-vscode "Gruntfuggly.todo-tree"
-vscode "HaaLeo.timing"
+vscode "gruntfuggly.todo-tree"
+vscode "haaleo.timing"
 vscode "janisdd.vscode-edit-csv"
 vscode "jasonlhy.hungry-delete"
-vscode "KevinRose.vsc-python-indent"
-vscode "magicstack.MagicPython"
+vscode "kevinrose.vsc-python-indent"
+vscode "magicstack.magicpython"
 vscode "mechatroner.rainbow-csv"
 vscode "michelemelluso.gitignore"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-playwright.playwright"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -148,12 +147,12 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "njpwerner.autodocstring"
-vscode "PKief.material-icon-theme"
-vscode "Raju.vscode-webdriverio-snippets"
+vscode "pkief.material-icon-theme"
+vscode "raju.vscode-webdriverio-snippets"
 vscode "redhat.vscode-yaml"
-vscode "Shelex.vscode-cy-helper"
+vscode "shelex.vscode-cy-helper"
 vscode "spoonscen.es6-mocha-snippets"
-vscode "Stalinbalraj.timestamp-converter"
+vscode "stalinbalraj.timestamp-converter"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "vinliao.fast-arrow"
 vscode "vscode-icons-team.vscode-icons"
