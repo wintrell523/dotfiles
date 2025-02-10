@@ -42,7 +42,7 @@ export GITLAB_SDK_KEY="***REMOVED***"
 # export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
 # export PATH=$PATH:/opt/gradle/gradle-6.8.1/bin
 export PATH=$PATH:/opt/homebrew/bin/brew
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # Source other files
 [[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
