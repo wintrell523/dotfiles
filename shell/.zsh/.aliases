@@ -5,7 +5,7 @@ alias szshrc='source ~/.zshrc'
 # alias nano='nano -B -i -m'
 alias python=python3
 alias py=python3
-alias ls='eza -lah --git'
+alias ls='eza -lah --git --icons'
 alias eza='eza -lah --git'
 alias cat='bat'
 # update alias
