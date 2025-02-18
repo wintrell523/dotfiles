@@ -25,13 +25,15 @@ brew "k6"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Small memory footprint, flexible web-server
-brew "lighttpd", restart_service: true
+brew "lighttpd", restart_service: :changed
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
 # Platform built on V8 to build network applications
-brew "node@18"
+brew "node@20"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Implementation of Telnet and SSH
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
@@ -69,7 +71,7 @@ cask "iterm2"
 cask "keka"
 # Kubernetes IDE
 cask "lens"
-# Web browser
+# Multi-platform web browser
 cask "microsoft-edge"
 # App to write, plan, collaborate, and get organised
 cask "notion"
@@ -97,15 +99,12 @@ mas "HP Smart", id: 1474276998
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Structured", id: 1499198946
-mas "Usage", id: 1561788435
 mas "Wipr", id: 1320666476
 vscode "aaron-bond.better-comments"
 vscode "activitywatch.aw-watcher-vscode"
 vscode "albert.tabout"
 vscode "andrew-codes.cypress-snippets"
 vscode "attilabuti.mustache-syntax-vscode"
-vscode "charliermarsh.ruff"
 vscode "codezombiech.gitignore"
 vscode "continue.continue"
 vscode "d-biehl.robotcode"
