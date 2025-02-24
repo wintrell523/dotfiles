@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "zkondor/dist"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Console Matrix
@@ -91,7 +92,10 @@ cask "telegram"
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
+# A tool to toggle Macbook's infamous notch in one click with automation support
+cask "znotch"
 mas "1Password for Safari", id: 1569813296
+mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "HP Easy Scan", id: 967004861
