@@ -14,10 +14,10 @@
 	safecrlf = false
 	# must be absolute path
 	excludesfile = /Users/jan.urban/.gitignore_global
-	editor = code --wait
+	editor = cursor --wait
 [diff]
 	mnemonicprefix = true
-	tool = vscode
+	tool = cursor
 [pull]
 	rebase = true
 [push]
@@ -38,5 +38,5 @@
 	changed = red bold
 	untracked = cyan
 	branch = yellow black bold ul
-[difftool "vscode"]
-	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+[difftool "cursor"]
+	cmd = cursor --wait --diff \"$LOCAL\" \"$REMOTE\"
