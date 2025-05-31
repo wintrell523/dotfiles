@@ -7,6 +7,8 @@ tap "zkondor/dist"
 brew "bat"
 # Console Matrix
 brew "cmatrix"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # Pack, ship and run any application as a lightweight container
@@ -57,6 +59,8 @@ cask "appcleaner"
 cask "browserosaurus"
 # Allows switching between application windows
 cask "contexts"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
 # Collaborative team software
@@ -104,6 +108,7 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "activitywatch.aw-watcher-vscode"
 vscode "albert.tabout"
