@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -51,6 +50,8 @@ brew "tree"
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Backup and Restore your Mac System and App Preferences
+brew "sijanc147/formulas/macprefs"
 # Command-line interface for 1Password
 cask "1password-cli"
 # Application uninstaller
@@ -142,6 +143,7 @@ vscode "magicstack.magicpython"
 vscode "mechatroner.rainbow-csv"
 vscode "michelemelluso.gitignore"
 vscode "monokai.theme-monokai-pro-vscode"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-playwright.playwright"
 vscode "ms-python.debugpy"
