@@ -1,1 +1,4 @@
 dotbot
+.env
+secrets/*.gpg
+!secrets/

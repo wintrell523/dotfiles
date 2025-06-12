@@ -26,17 +26,6 @@ export GPG_TTY=$(tty)
 
 export EDITOR=vim
 
-export LT_USERNAME="***REMOVED***"
-export LT_ACCESS_KEY="***REMOVED***"
-export BROWSER_STACK_USERNAME="***REMOVED***"
-export BROWSER_STACK_ACCESS_KEY="***REMOVED***"
-export E2E_API_PUBLIC_KEY="***REMOVED***"
-export E2E_API_SECRET="***REMOVED***"
-export E2E_EXPERIMENTS_API_PUBLIC_KEY="***REMOVED***"
-export E2E_EXPERIMENTS_API_SECRET="***REMOVED***"
-export OPENAI_API_KEY="sk-***REMOVED***"
-export GITLAB_SDK_KEY="***REMOVED***"
-
 # export PATH
 # gradle and maven managed by sdkman
 # export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
@@ -51,3 +40,9 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
+# Load environment variables from .env file
+if [ -f "$HOME/.env" ]; then
+  set -a                   # export every variable that gets defined
+  source "$HOME/.env"
+  set +a
+fi
