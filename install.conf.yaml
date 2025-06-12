@@ -7,6 +7,8 @@
 
 - create:
     - ~/.zsh
+    - ~/.ssh
+    - ~/.gnupg
 
 - link:
     # Shell stuff
@@ -22,6 +24,7 @@
     # Node
     ~/.npmrc: node/.npmrc
     ~/.yarnrc: node/.yarnrc
+    ~/.actrc: .actrc
     # SSH:
     ~/.ssh/config:
       path: ssh/config
@@ -30,11 +33,11 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
-    # VSC
-    "~/Library/Application Support/Code/User/settings.json":
-      path: vscode/settings.json
-      create: true
-    ~/Library/Application Support/Code/User/snippets/cypress_snippets.code-snippets: vscode/snippets/cypress_snippets.code-snippets
+    # # VSC
+    # "~/Library/Application Support/Code/User/settings.json":
+    #   path: vscode/settings.json
+    #   create: true
+    # ~/Library/Application Support/Code/User/snippets/cypress_snippets.code-snippets: vscode/snippets/cypress_snippets.code-snippets
     # Finicky (browser routes)
     ~/.finicky.js: .finicky.js
     # Mackup config
@@ -47,13 +50,13 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-
 # This apply to all commands that come after setting the defaults.
 - defaults:
     brewfile:
       stdout: false
       stderr: false
-      include: ["tap", "brew", "cask", "mas", "vscode"]
+      include: ["tap", "brew"]
+      # include: ["tap", "brew", "cask", "mas"]
       # Optional, if you want to run install command as another user:
       sudo: brewuser
 

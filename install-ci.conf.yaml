@@ -1,0 +1,39 @@
+# install-ci.conf.yaml
+
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- create:
+    - ~/.zsh
+    - ~/.ssh
+    - ~/.gnupg
+
+- link:
+    ~/.zsh/.aliases: shell/.zsh/.aliases
+    ~/.zsh/.functions: shell/.zsh/.functions
+    ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zshrc:
+      path: shell/.zshrc
+      force: true
+    ~/.vimrc: shell/.vimrc
+    ~/.npmrc: node/.npmrc
+    ~/.yarnrc: node/.yarnrc
+    ~/.actrc: .actrc
+    ~/.ssh/config:
+      path: ssh/config
+      force: true
+      create: true
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.finicky.js: .finicky.js
+    ~/.mackup.cfg: .mackup.cfg
+    ~/.gnupg/gpg-agent.conf:
+      path: shell/gpgagent
+      force: true
+      create: true
+
+- shell:
+    - [git submodule update --init --recursive, Syncing submodules]
