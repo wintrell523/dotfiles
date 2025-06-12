@@ -15,7 +15,6 @@
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
     ~/.zshrc: shell/.zshrc
     ~/.vimrc: shell/.vimrc
-    ~/.netrc: shell/.netrc
     # Node
     ~/.npmrc: node/.npmrc
     ~/.yarnrc: node/.yarnrc
