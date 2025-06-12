@@ -30,7 +30,7 @@ export EDITOR=vim
 # gradle and maven managed by sdkman
 # export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
 # export PATH=$PATH:/opt/gradle/gradle-6.8.1/bin
-export PATH=$PATH:/opt/homebrew/bin/brew
+export PATH="/opt/homebrew/bin/brew:$PATH"
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # Source other files

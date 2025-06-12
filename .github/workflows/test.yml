@@ -1,0 +1,43 @@
+name: Dotfiles CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dotbot-install-test:
+    name: Test Dotbot Install
+    runs-on: macos-latest
+    steps:
+      - name: Checkout dotfiles
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Manually reinit submodules (for act compatibility)
+        run: |
+          git submodule deinit -f .
+          git submodule update --init --recursive
+
+      - name: Install Homebrew and Oh-My-Zsh
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+      - name: Create fake HOME directory for testing
+        run: |
+          echo "TEMP_HOME=$(mktemp -d)" >> $GITHUB_ENV
+
+      - name: Run Dotbot install script
+        env:
+          HOME: ${{ env.TEMP_HOME }}
+        run: |
+          chmod +x ./install
+          ./install | tee dotbot-ci.log
+
+      - name: Show results (optional)
+        env:
+          HOME: ${{ env.TEMP_HOME }}
+        run: |
+          echo "Listing .zsh folder:"
+          ls -la $HOME/.zsh
