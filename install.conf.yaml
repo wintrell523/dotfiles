@@ -28,6 +28,8 @@
     ~/Library/Application Support/Code/User/snippets/cypress_snippets.code-snippets: vscode/snippets/cypress_snippets.code-snippets
     # Finicky (browser routes)
     ~/.finicky.js: .finicky.js
+    # Mackup config
+    ~/.mackup.cfg: .mackup.cfg
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
