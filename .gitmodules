@@ -5,6 +5,3 @@
 [submodule "dotbot-brewfile"]
 	path = dotbot-plugins/dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
-[submodule "dotbot-vscode"]
-	path = dotbot-plugins/dotbot-vscode
-	url = https://github.com/hujianxin/dotbot-vscode

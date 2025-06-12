@@ -13,31 +13,58 @@
     ~/.zsh/.aliases: shell/.zsh/.aliases
     ~/.zsh/.functions: shell/.zsh/.functions
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
-    ~/.zshrc: shell/.zshrc
-    ~/.vimrc: shell/.vimrc
+    ~/.zshrc:
+      force: true
+      path: shell/.zshrc
+    ~/.vimrc:
+      relink: true
+      path: shell/.vimrc
     # Node
     ~/.npmrc: node/.npmrc
     ~/.yarnrc: node/.yarnrc
-    # SSH
-    ~/.ssh/config: ssh/config
+    # SSH:
+    ~/.ssh/config:
+      path: ssh/config
+      force: true
+      create: true
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
     # VSC
-    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    "~/Library/Application Support/Code/User/settings.json":
+      path: vscode/settings.json
+      create: true
     ~/Library/Application Support/Code/User/snippets/cypress_snippets.code-snippets: vscode/snippets/cypress_snippets.code-snippets
     # Finicky (browser routes)
     ~/.finicky.js: .finicky.js
     # Mackup config
     ~/.mackup.cfg: .mackup.cfg
+    # GPG:
+    ~/.gnupg/gpg-agent.conf:
+      path: shell/gpgagent
+      force: true
+      create: true
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+
+# This apply to all commands that come after setting the defaults.
+- defaults:
+    brewfile:
+      stdout: false
+      stderr: false
+      include: ["tap", "brew", "cask", "mas", "vscode"]
+      # Optional, if you want to run install command as another user:
+      sudo: brewuser
 
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
 
-- vscodefile:
-    file: vscode_extensions
-    insiders: false
+- brewfile:
+    file: Brewfile
+    no-upgrade: true
+    stdout: true
+    stderr: true
+    # Brewfile now has vscode plugins:
+    include: ["vscode"]

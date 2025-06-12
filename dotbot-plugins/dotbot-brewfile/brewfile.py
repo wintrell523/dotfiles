@@ -5,13 +5,13 @@ import subprocess
 import dotbot
 
 
-INCLUDE_OPTIONS = frozenset(('tap', 'brew', 'cask', 'mas'))
+INCLUDE_OPTIONS = frozenset(('tap', 'brew', 'cask', 'mas', 'vscode'))
 BREWFILE_LINE = re.compile(
     r"""
     ^
-        (?P<type>(tap|brew|cask|mas))\s*  # dependency type
-        "(?P<name>.*)"\s*                 # name between quotes
-        (,\s*id:\s*(?P<id>\d\d*)\s*)?     # id for mas items
+        (?P<type>(tap|brew|cask|mas|vscode))\s*  # dependency type
+        "(?P<name>.*)"\s*                        # name between quotes
+        (,\s*id:\s*(?P<id>\d\d*)\s*)?            # id for mas items
     $
     """,
     re.MULTILINE | re.VERBOSE,
@@ -23,7 +23,6 @@ class Brew(dotbot.Plugin):
         'brewfile',
     ))
 
-    _tap_command = 'brew tap homebrew/bundle'
     _install_command = 'brew bundle'
 
     # Defaults
@@ -44,7 +43,6 @@ class Brew(dotbot.Plugin):
             if not self._does_brewfile_exist(data):
                 raise ValueError('Bundle file does not exist.')
 
-            self._handle_tap(data)
             self._handle_install(data)
         except ValueError as e:
             self._log.error(e)
@@ -81,10 +79,13 @@ class Brew(dotbot.Plugin):
                 return option
             return '%s=%s' % (option, value)
 
+        sudo_user = data.get('sudo')
+        if sudo_user:
+            command = 'sudo -Hu {0} {1}'.format(sudo_user, command)
         options = [command]
 
         for key, value in data.items():
-            if key not in {'stdout', 'stderr', 'include'}:
+            if key not in {'stdout', 'stderr', 'include', 'sudo'}:
                 options.append(build_option(key, value))
         return ' '.join(options)
 
@@ -134,23 +135,6 @@ class Brew(dotbot.Plugin):
         stderr = data.get('stderr', stderr_default)
 
         return stdout, stderr
-
-    def _handle_tap(self, data):
-        stdout, stderr = self._get_options(data)
-
-        with open(os.devnull, 'w') as devnull:
-            result = subprocess.call(
-                self._tap_command,
-                shell=True,
-                stdin=devnull,
-                stdout=True if stdout else devnull,
-                stderr=True if stderr else devnull,
-                cwd=self.cwd,
-                executable=os.environ.get('SHELL'),
-            )
-
-            if result != 0:
-                raise ValueError('Failed to tap homebrew/bundle.')
 
     def _handle_install(self, data):
         environs = self._build_environs(data)
