@@ -36,6 +36,8 @@ brew "mackup"
 brew "mas"
 # Platform built on V8 to build network applications
 brew "node@20"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Implementation of Telnet and SSH
