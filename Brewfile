@@ -4,6 +4,8 @@ tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Remove large files or passwords from Git history like git-filter-branch
+brew "bfg"
 # Console Matrix
 brew "cmatrix"
 # Dependency manager for Cocoa projects
