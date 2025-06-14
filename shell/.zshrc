@@ -5,26 +5,29 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Load Antigen from default location or fallback to user-installed path
-if [[ -f /opt/homebrew/share/antigen/antigen.zsh ]]; then
-  source /opt/homebrew/share/antigen/antigen.zsh
-elif [[ -f "$HOME/.antigen/antigen.zsh" ]]; then
-  source "$HOME/.antigen/antigen.zsh"
-else
-  echo "Antigen not found. Please install it or update the path in .zshrc."
+# Load zplug
+export ZPLUG_HOME="${HOME}/.zplug"
+if [[ ! -d $ZPLUG_HOME ]]; then
+  git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
+fi
+source "${ZPLUG_HOME}/init.zsh"
+
+# zplug plugins
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "ohmyzsh/ohmyzsh", as:plugin, use:plugins/common-aliases
+zplug "ohmyzsh/ohmyzsh", as:plugin, use:plugins/colored-man-pages
+zplug "romkatv/powerlevel10k", as:theme
+
+# Install plugins if missing
+if ! zplug check --verbose; then
+  printf "\nInstalling missing zplug plugins...\n"
+  zplug install
 fi
 
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle common-aliases
-antigen bundle colored-man-pages
-antigen bundle zsh-users/zsh-history-substring-search
-
-antigen theme romkatv/powerlevel10k
-
-antigen apply
+# Load plugins
+zplug load
 
 # export ZSH="/Users/jan.urban/.oh-my-zsh"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
