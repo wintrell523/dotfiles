@@ -2,6 +2,10 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "sijanc147/formulas"
 tap "zkondor/dist"
+# Run your GitHub Actions locally
+brew "act"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Remove large files or passwords from Git history like git-filter-branch
@@ -46,6 +50,8 @@ brew "putty"
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Text interface for Git repositories
 brew "tig"
 # Display directories as trees (with optional color/HTML output)
