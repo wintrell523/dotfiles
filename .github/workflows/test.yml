@@ -1,7 +1,6 @@
 name: Dotfiles CI
 
 on:
-  push:
   pull_request:
 
 jobs:
