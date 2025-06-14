@@ -24,19 +24,20 @@ jobs:
           RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
       - name: Create fake HOME directory for testing
+        id: fake_home
         run: |
-          echo "TEMP_HOME=$(mktemp -d)" >> $GITHUB_ENV
+          echo "temp_home=$(mktemp -d)" >> $GITHUB_OUTPUT
 
       - name: Run Dotbot install script
         env:
-          HOME: ${{ env.TEMP_HOME }}
+          HOME: ${{ steps.fake_home.outputs.temp_home }}
         run: |
           chmod +x ./install
           ./install | tee dotbot-ci.log
 
       - name: Show results (optional)
         env:
-          HOME: ${{ env.TEMP_HOME }}
+          HOME: ${{ steps.fake_home.outputs.temp_home }}
         run: |
           echo "Listing .zsh folder:"
           ls -la $HOME/.zsh
