@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
@@ -64,6 +62,8 @@ brew "zsh"
 brew "sijanc147/formulas/macprefs"
 # Command-line interface for 1Password
 cask "1password-cli"
+# AirPods companion app
+cask "airbuddy"
 # Application uninstaller
 cask "appcleaner"
 # Open-source browser prompter
@@ -79,14 +79,20 @@ cask "figma"
 # Utility for customizing which browser to start
 cask "finicky"
 cask "font-fira-code"
+# Web browser
+cask "google-chrome"
 # Free and open-source media player
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Menu bar manager
+cask "jordanbaird-ice"
 # File archiver
 cask "keka"
 # Kubernetes IDE
 cask "lens"
+# Software for Logitech devices
+cask "logi-options+"
 # Multi-platform web browser
 cask "microsoft-edge"
 # App to write, plan, collaborate, and get organised
@@ -119,12 +125,13 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Wipr", id: 1320666476
-mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "activitywatch.aw-watcher-vscode"
 vscode "albert.tabout"
 vscode "andrew-codes.cypress-snippets"
 vscode "attilabuti.mustache-syntax-vscode"
+vscode "batisteo.vscode-django"
+vscode "bradlc.vscode-tailwindcss"
 vscode "codezombiech.gitignore"
 vscode "continue.continue"
 vscode "d-biehl.robotcode"
@@ -143,6 +150,9 @@ vscode "felipecaputo.git-project-manager"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
+vscode "g-fidalgo.cypress-runner"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "gruntfuggly.todo-tree"
 vscode "haaleo.timing"
@@ -160,6 +170,7 @@ vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
@@ -169,6 +180,7 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "njpwerner.autodocstring"
+vscode "oracle.oracle-java"
 vscode "pkief.material-icon-theme"
 vscode "raju.vscode-webdriverio-snippets"
 vscode "redhat.vscode-yaml"
@@ -176,8 +188,13 @@ vscode "shelex.vscode-cy-helper"
 vscode "spoonscen.es6-mocha-snippets"
 vscode "stalinbalraj.timestamp-converter"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "sureshnettur.ccaia"
 vscode "tamasfe.even-better-toml"
 vscode "vinliao.fast-arrow"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-spring-initializr"
 vscode "vscode-icons-team.vscode-icons"
+vscode "wholroyd.jinja"
 vscode "will-stone.plastic"
 vscode "yzhang.markdown-all-in-one"
