@@ -15,6 +15,9 @@
     ~/.zsh/.aliases: shell/.zsh/.aliases
     ~/.zsh/.functions: shell/.zsh/.functions
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zprofile:
+      force: true
+      path: shell/.zprofile
     ~/.zshrc:
       force: true
       path: shell/.zshrc
@@ -53,10 +56,10 @@
 # This apply to all commands that come after setting the defaults.
 - defaults:
     brewfile:
-      stdout: false
-      stderr: false
-      include: ["tap", "brew"]
-      # include: ["tap", "brew", "cask", "mas"]
+      stdout: true
+      stderr: true
+      # include: ["tap", "brew"]
+      include: ["tap", "brew", "cask", "mas"]
       # Optional, if you want to run install command as another user:
       sudo: brewuser
 
