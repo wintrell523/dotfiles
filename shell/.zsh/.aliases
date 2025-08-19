@@ -52,12 +52,6 @@ alias gsh='git stash'
 alias gsp='git stash pop'
 alias gca='git commit --amend'
 
-# BR - SDK aliases
-alias preview='npm run preview:clean && npm run preview:serve:dev'
-alias npmci='rm -rf .node_modules && npm ci'
-alias tschr='npm run e2e:cloud:chrome -- --spec $1'
-alias tsall='npm run e2e:cloud:all -- --spec $1'
-alias tschrall='npm run e2e:cloud:chrome'
 
 # GPT aliases
 alias chat='colima start && docker run -e OPENAI_API_KEY=$OPENAI_API_KEY -p 3000:3000 chatgpt-ui'

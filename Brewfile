@@ -1,3 +1,4 @@
+tap "hashicorp/tap"
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
@@ -24,6 +25,8 @@ brew "docker-credential-helper"
 brew "eza"
 # Distributed revision control system
 brew "git"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
@@ -38,6 +41,8 @@ brew "mackup"
 brew "mas"
 # Platform built on V8 to build network applications
 brew "node@20"
+# Smart, Fast and Extensible Build System
+brew "nx"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
@@ -58,6 +63,8 @@ brew "tree"
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Vault
+brew "hashicorp/tap/vault"
 # Backup and Restore your Mac System and App Preferences
 brew "sijanc147/formulas/macprefs"
 # Command-line interface for 1Password
@@ -122,16 +129,19 @@ mas "Hidden Bar", id: 1452453066
 mas "HP Easy Scan", id: 967004861
 mas "HP Smart", id: 1474276998
 mas "Keynote", id: 409183694
+mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Wipr", id: 1320666476
 vscode "aaron-bond.better-comments"
+vscode "abumalick.vscode-nvm"
 vscode "activitywatch.aw-watcher-vscode"
 vscode "albert.tabout"
 vscode "andrew-codes.cypress-snippets"
 vscode "attilabuti.mustache-syntax-vscode"
 vscode "batisteo.vscode-django"
 vscode "bradlc.vscode-tailwindcss"
+vscode "coderabbit.coderabbit-vscode"
 vscode "codezombiech.gitignore"
 vscode "continue.continue"
 vscode "d-biehl.robotcode"
@@ -147,17 +157,20 @@ vscode "elanandkumar.el-vsc-product-icon-theme"
 vscode "eriklynd.json-tools"
 vscode "esbenp.prettier-vscode"
 vscode "felipecaputo.git-project-manager"
+vscode "firsttris.vscode-jest-runner"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "g-fidalgo.cypress-runner"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
 vscode "gruntfuggly.todo-tree"
 vscode "haaleo.timing"
 vscode "janisdd.vscode-edit-csv"
 vscode "jasonlhy.hungry-delete"
+vscode "jasonnutter.vscode-codeowners"
 vscode "kevinrose.vsc-python-indent"
 vscode "magicstack.magicpython"
 vscode "mechatroner.rainbow-csv"
@@ -180,7 +193,9 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "njpwerner.autodocstring"
+vscode "nrwl.angular-console"
 vscode "oracle.oracle-java"
+vscode "orta.vscode-jest"
 vscode "pkief.material-icon-theme"
 vscode "raju.vscode-webdriverio-snippets"
 vscode "redhat.vscode-yaml"
@@ -188,6 +203,7 @@ vscode "shelex.vscode-cy-helper"
 vscode "spoonscen.es6-mocha-snippets"
 vscode "stalinbalraj.timestamp-converter"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "stylelint.vscode-stylelint"
 vscode "sureshnettur.ccaia"
 vscode "tamasfe.even-better-toml"
 vscode "vinliao.fast-arrow"

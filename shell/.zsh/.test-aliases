@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# Test Runner Aliases for Frontend Monorepo
+# Source this file in your shell profile: source ~/.zsh/.test-aliases
+
+# Base test runner function
+test_run() {
+    "$HOME/.zsh/test-runner.sh" "$@"
+}
+
+# Quick team regression tests
+alias test-sugma='test_run -e dev -m build -a dms -t "@team:sugma+@regression"'
+alias test-warehouse='test_run -e dev -m build -a dms -t "@team:warehouse+@regression"'
+alias test-workshop='test_run -e dev -m build -a dms -t "@team:workshop+@regression"'
+alias test-platform='test_run -e dev -m build -a dms -t "@team:platform+@regression"'
+alias test-sentinels='test_run -e dev -m build -a dms -t "@team:sentinels+@regression"'
+alias test-soyuz='test_run -e dev -m build -a dms -t "@team:soyuz+@regression"'
+alias test-caraudit='test_run -e dev -m build -a dms -t "@team:caraudit+@regression"'
+
+# Interactive/watch mode for teams
+alias test-sugma-watch='test_run -e dev -m build -a dms -t "@team:sugma+@regression" -w'
+alias test-warehouse-watch='test_run -e dev -m build -a dms -t "@team:warehouse+@regression" -w'
+alias test-platform-watch='test_run -e dev -m build -a dms -t "@team:platform+@regression" -w'
+
+# Stage environment tests
+alias test-stage-sugma='test_run -e stage -m build -a dms -t "@team:sugma+@regression"'
+alias test-stage-warehouse='test_run -e stage -m build -a dms -t "@team:warehouse+@regression"'
+alias test-stage-platform='test_run -e stage -m build -a dms -t "@team:platform+@regression"'
+
+# Module-specific merge request tests
+alias test-mr-settings='test_run -e dev -m build -a dms -t "@module:settings+@mergeRequest"'
+alias test-mr-vehicle='test_run -e dev -m build -a dms -t "@module:vehicle+@mergeRequest"'
+alias test-mr-sourcing='test_run -e dev -m build -a dms -t "@module:sourcing+@mergeRequest"'
+alias test-mr-accounting='test_run -e dev -m build -a dms -t "@module:accounting+@mergeRequest"'
+alias test-mr-warehouse='test_run -e dev -m build -a dms -t "@module:warehouse:article+@mergeRequest"'
+
+# Application-specific tests
+alias test-dms='test_run -e dev -m build -a dms'
+alias test-price-report='test_run -e dev -m build -a price-report'
+alias test-vin-decoder='test_run -e dev -m build -a vin-decoder'
+alias test-digital-certificate='test_run -e dev -m build -a digital-certificate'
+
+# URL-based testing (for testing against deployed environments)
+test-url() {
+    local url="$1"
+    local tags="${2:-@team:platform}"
+    local app="${3:-dms}"
+    test_run -e dev -m url -a "$app" -u "$url" -t "$tags"
+}
+
+# Quick URL tests against dev environment
+alias test-dev-url='test-url "https://e2e.dev.omnetic.dev"'
+alias test-stage-url='test-url "https://e2e.stage.omnetic.dev"'
+
+# Utility functions
+test-help() {
+    echo "Available test aliases:"
+    echo ""
+    echo "Team Regression Tests:"
+    echo "  test-sugma, test-warehouse, test-workshop, test-platform"
+    echo "  test-sentinels, test-soyuz, test-caraudit"
+    echo ""
+    echo "Interactive/Watch Mode:"
+    echo "  test-sugma-watch, test-warehouse-watch, test-platform-watch"
+    echo ""
+    echo "Stage Environment:"
+    echo "  test-stage-sugma, test-stage-warehouse, test-stage-platform"
+    echo ""
+    echo "Merge Request Tests:"
+    echo "  test-mr-settings, test-mr-vehicle, test-mr-sourcing"
+    echo "  test-mr-accounting, test-mr-warehouse"
+    echo ""
+    echo "Application Tests:"
+    echo "  test-dms, test-price-report, test-vin-decoder, test-digital-certificate"
+    echo ""
+    echo "URL-based Testing:"
+    echo "  test-url <url> [tags] [app]"
+    echo "  test-dev-url [tags] [app]"
+    echo "  test-stage-url [tags] [app]"
+    echo ""
+    echo "Full Script Help:"
+    echo "  test_run --help"
+    echo ""
+    echo "Examples:"
+    echo "  test-platform                    # Platform team regression tests"
+    echo "  test-platform-watch             # Interactive platform tests"
+    echo "  test-mr-settings                 # Settings module MR tests"
+    echo "  test-url \"https://my-url.com\" \"@team:sugma\" \"dms\""
+    echo "  test_run -e dev -m build -a dms -t \"@team:platform+@module:settings\""
+}
+
+# Export functions for use in subshells
+export -f test_run test-url test-help
+
+echo "✅ Test aliases loaded! Type 'test-help' for available commands."

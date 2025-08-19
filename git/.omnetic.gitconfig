@@ -1,4 +1,10 @@
 [user]
 	name = Honza Urban
 	email = jan.urban@omnetic.com
-	signingkey = 712B77052EB15268
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMOIRMiUkoiqx3xI7KrlLIN460bgw/ejkK0rqk9wvvKl
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
