@@ -1,3 +1,6 @@
+# Load exports first (needed for zplug and other tools)
+[[ -f ~/.zsh/.exports ]] && source ~/.zsh/.exports
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -6,7 +9,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Load zplug
-export ZPLUG_HOME="${HOME}/.zplug"
 if [[ ! -d $ZPLUG_HOME ]]; then
   git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
 fi
@@ -45,25 +47,15 @@ zplug load
 
 HIST_STAMPS="dd.mm.yyyy"
 
-# PGP config
-# because of https://github.com/keybase/keybase-issues/issues/2798
-export GPG_TTY=$(tty)
-
-export EDITOR=vim
-
-# export PATH
-# gradle and maven managed by sdkman
-# export PATH=/opt/maven/apache-maven-3.6.3/bin:$PATH
-# export PATH=$PATH:/opt/gradle/gradle-6.8.1/bin
-export PATH="/opt/homebrew/bin/brew:$PATH"
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-export NODE_OPTIONS="--max-old-space-size=8192"
-
-# Source other files
+# Source domain-organized configuration files
+[[ -f ~/.zsh/.env ]] && source ~/.zsh/.env
+[[ -f ~/.zsh/git.zsh ]] && source ~/.zsh/git.zsh
+[[ -f ~/.zsh/system.zsh ]] && source ~/.zsh/system.zsh
+[[ -f ~/.zsh/dev.zsh ]] && source ~/.zsh/dev.zsh
+[[ -f ~/.zsh/apps.zsh ]] && source ~/.zsh/apps.zsh
+[[ -f ~/.zsh/security.zsh ]] && source ~/.zsh/security.zsh
+[[ -f ~/.zsh/personal.zsh ]] && source ~/.zsh/personal.zsh
 [[ -f ~/.zsh/.test-aliases ]] && source ~/.zsh/.test-aliases
-[[ -f ~/.dotfiles/shell/.env ]] && source ~/.dotfiles/shell/.env
-[[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
-[[ -f ~/.zsh/.functions ]] && source ~/.zsh/.functions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
@@ -74,5 +66,3 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +a
 fi
-# Added by CodeRabbit CLI installer
-export PATH="/Users/wintrell/.local/bin:$PATH"
