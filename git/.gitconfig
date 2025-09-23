@@ -7,7 +7,9 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
 	# windows->true, linux-> input
 	autocrlf = input
@@ -42,3 +44,5 @@
 	cmd = cursor --wait --diff \"$LOCAL\" \"$REMOTE\"
 [user]
 	email = honza@urban-cz.eu
+[coderabbit]
+	machineId = cli/0c4fab6cf76b49038d6e2b3981bbf644
