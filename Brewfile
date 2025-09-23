@@ -96,6 +96,8 @@ cask "iterm2"
 cask "jordanbaird-ice"
 # File archiver
 cask "keka"
+# Blocks all Keyboard and TouchBar input
+cask "keyboardcleantool"
 # Kubernetes IDE
 cask "lens"
 # Software for Logitech devices
@@ -114,20 +116,20 @@ cask "shottr"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Messaging app with a focus on speed and security
-cask "telegram"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
+# Multiplayer code editor
+cask "zed"
 # A tool to toggle Macbook's infamous notch in one click with automation support
 cask "znotch"
 mas "1Password for Safari", id: 1569813296
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
+mas "HP", id: 1474276998
 mas "HP Easy Scan", id: 967004861
-mas "HP Smart", id: 1474276998
 mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
