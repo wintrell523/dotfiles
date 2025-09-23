@@ -71,3 +71,16 @@ decr()
   tar xvf decrypted.tar.gz
   rm -f decrypted.tar.gz
 }
+
+# Secure npm install alias
+npm() {
+	if [[ "$1" == "install" || "$1" == "i" ]]; then
+		if [[ -f "tools/check-package-ages/check-package-ages.js" ]]; then
+			node tools/check-package-ages/check-package-ages.js "$@"
+		else
+			command npm "$@"
+		fi
+	else
+		command npm "$@"
+	fi
+}

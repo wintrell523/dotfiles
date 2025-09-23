@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # Test Runner Aliases for Frontend Monorepo
 # Source this file in your shell profile: source ~/.zsh/.test-aliases
@@ -89,7 +89,6 @@ test-help() {
     echo "  test_run -e dev -m build -a dms -t \"@team:platform+@module:settings\""
 }
 
-# Export functions for use in subshells
-export -f test_run test-url test-help
+# Functions are available in current shell session
 
 echo "✅ Test aliases loaded! Type 'test-help' for available commands."

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # Dynamic Test Runner for Frontend Monorepo
 # Usage: ./test-runner.sh [options]

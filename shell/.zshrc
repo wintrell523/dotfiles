@@ -60,9 +60,10 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 # Source other files
+[[ -f ~/.zsh/.test-aliases ]] && source ~/.zsh/.test-aliases
+[[ -f ~/.dotfiles/shell/.env ]] && source ~/.dotfiles/shell/.env
 [[ -f ~/.zsh/.aliases ]] && source ~/.zsh/.aliases
 [[ -f ~/.zsh/.functions ]] && source ~/.zsh/.functions
-[[ -f ~/.zsh/.test-aliases ]] && source ~/.zsh/.test-aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
@@ -73,3 +74,5 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +a
 fi
+# Added by CodeRabbit CLI installer
+export PATH="/Users/wintrell/.local/bin:$PATH"
