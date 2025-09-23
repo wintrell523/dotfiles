@@ -90,5 +90,3 @@ test-help() {
 }
 
 # Functions are available in current shell session
-
-echo "✅ Test aliases loaded! Type 'test-help' for available commands."

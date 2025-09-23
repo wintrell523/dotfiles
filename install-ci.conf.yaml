@@ -12,9 +12,18 @@
     - ~/.gnupg
 
 - link:
-    ~/.zsh/.aliases: shell/.zsh/.aliases
-    ~/.zsh/.functions: shell/.zsh/.functions
+    # Domain-organized shell files
+    ~/.zsh/git.zsh: shell/.zsh/git.zsh
+    ~/.zsh/system.zsh: shell/.zsh/system.zsh
+    ~/.zsh/dev.zsh: shell/.zsh/dev.zsh
+    ~/.zsh/apps.zsh: shell/.zsh/apps.zsh
+    ~/.zsh/security.zsh: shell/.zsh/security.zsh
+    ~/.zsh/personal.zsh: shell/.zsh/personal.zsh
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zsh/.test-aliases: shell/.zsh/.test-aliases
+    ~/.zsh/test-runner.sh: shell/.zsh/test-runner.sh
+    ~/.zsh/.exports: shell/.exports
+    ~/.zsh/.env: shell/.env
     ~/.zshrc:
       path: shell/.zshrc
       force: true

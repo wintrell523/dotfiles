@@ -1,0 +1,25 @@
+# Shell exports consolidated from dotfiles
+
+# Dotfiles directory
+export DOTFILES="$HOME/.dotfiles"
+
+# zplug home directory
+export ZPLUG_HOME="${HOME}/.zplug"
+
+# PGP config
+# because of https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)
+
+# Editor
+export EDITOR=vim
+
+# PATH exports
+export PATH="/opt/homebrew/bin/brew:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/Users/wintrell/.local/bin:$PATH"
+
+# Node.js options
+export NODE_OPTIONS="--max-old-space-size=8192"
+
+# GPG default recipient for encryption (falls back to git user.email)
+# export GPG_DEFAULT_RECIPIENT="your-email@example.com"

@@ -1,0 +1,27 @@
+# Development tools and language-specific aliases/functions
+# Programming languages, package managers, and development utilities
+
+# ===== Language Aliases =====
+alias python=python3
+alias py=python3
+
+# ===== Package Managers =====
+alias y=yarn
+
+# ===== Container & Orchestration =====
+alias k=kubectl
+
+# ===== Development Functions =====
+
+# Secure npm install alias with package age checking
+npm() {
+	if [[ "$1" == "install" || "$1" == "i" ]]; then
+		if [[ -f "tools/check-package-ages/check-package-ages.js" ]]; then
+			node tools/check-package-ages/check-package-ages.js "$@"
+		else
+			command npm "$@"
+		fi
+	else
+		command npm "$@"
+	fi
+}
