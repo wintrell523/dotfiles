@@ -39,7 +39,7 @@ brew "lighttpd", restart_service: :changed
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node@20"
 # Smart, Fast and Extensible Build System
 brew "nx"
@@ -93,7 +93,7 @@ cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Menu bar manager
-cask "jordanbaird-ice"
+cask "jordanbaird-ice@beta"
 # File archiver
 cask "keka"
 # Blocks all Keyboard and TouchBar input
@@ -134,6 +134,7 @@ mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Prime Video", id: 545519333
 mas "Wipr", id: 1320666476
 vscode "aaron-bond.better-comments"
 vscode "abumalick.vscode-nvm"

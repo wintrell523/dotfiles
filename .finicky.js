@@ -55,19 +55,19 @@ export default {
 	],
 	handlers: [
 		{
-			match: /^https?:\/\/.*exponea.*$/,
+			match: ({ opener }) => ["Slack"].includes(opener.name),
 			browser: browsers.work,
 		},
 		{
-			match: ({ opener }) => ["Twingate", "Slack"].includes(opener.name),
-			browser: browsers.work,
+			match: ({ opener }) => ["Airmail"].includes(opener.name),
+			browser: browsers.selector,
 		},
 		{
 			match: ({ opener }) => ["Discord", "Telegram"].includes(opener.name),
 			browser: browsers.personal,
 		},
 		{
-			match: /^https?:\/\/.*bloomreach.*$/,
+			match: /^https?:\/\/.*omnetic.*$/,
 			browser: browsers.work,
 		},
 		{

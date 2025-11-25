@@ -5,6 +5,7 @@
 alias gf='git fetch -p'
 alias gc='git commit'
 alias gcm='git commit -m $1'
+alias gcme='git commit --allow-empty -m $1'
 alias gaa='git add .'
 alias ga='git add'
 alias gs='git status'

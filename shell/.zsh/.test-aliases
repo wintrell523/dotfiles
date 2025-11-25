@@ -39,6 +39,10 @@ alias test-dms='test_run -e dev -m build -a dms'
 alias test-price-report='test_run -e dev -m build -a price-report'
 alias test-vin-decoder='test_run -e dev -m build -a vin-decoder'
 alias test-digital-certificate='test_run -e dev -m build -a digital-certificate'
+alias agentDebug='test_run -e dev -m url -a dms -t "@agentDebug" -w -u "https://e2e.dev.omnetic.dev"'
+alias platform-regression='test_run -e dev -m url -a dms -t "@team:platform+@regression" -w -u "https://e2e.dev.omnetic.dev"'
+alias platform-merge-request='test_run -e dev -m url -a dms -t "@team:platform+@mergeRequest" -w -u "https://e2e.dev.omnetic.dev"'
+alias platform-regression-headless='test_run -e dev -m url -a dms -t "@team:platform+@regression" -u "https://e2e.dev.omnetic.dev"'
 
 # URL-based testing (for testing against deployed environments)
 test-url() {

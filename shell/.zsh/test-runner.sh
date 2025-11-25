@@ -18,7 +18,7 @@ HELP=false
 # Available options
 ENVIRONMENTS=("dev" "stage")
 MODES=("build" "url")
-APPS=("dms" "price-report" "vin-decoder" "digital-certificate")
+APPS=("dms" "price-report" "vin-decoder" "digital-certificate" "iam")
 TEAMS=("@team:sugma" "@team:warehouse" "@team:workshop" "@team:platform" "@team:sentinels" "@team:soyuz" "@team:caraudit")
 TEST_TYPES=("@regression" "@mergeRequest")
 MODULES=("@module:settings" "@module:vehicle" "@module:sourcing" "@module:accounting" "@module:customer" "@module:employee" "@module:datagrid-e2e" "@module:warehouse:article" "@module:warehouse:delivery-note" "@module:warehouse:service-order")
