@@ -39,14 +39,14 @@ brew "lighttpd", restart_service: :changed
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node@20"
 # Smart, Fast and Extensible Build System
 brew "nx"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # Implementation of Telnet and SSH
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
@@ -75,6 +75,8 @@ cask "airbuddy"
 cask "appcleaner"
 # Open-source browser prompter
 cask "browserosaurus"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Allows switching between application windows
 cask "contexts"
 # Browser for SQLite databases
@@ -116,10 +118,14 @@ cask "shottr"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Messaging app with a focus on speed and security
+cask "telegram"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
 # A tool to toggle Macbook's infamous notch in one click with automation support

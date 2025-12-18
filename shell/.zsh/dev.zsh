@@ -7,6 +7,7 @@ alias py=python3
 
 # ===== Package Managers =====
 alias y=yarn
+alias npm=pnpm
 
 # ===== Container & Orchestration =====
 alias k=kubectl
@@ -14,14 +15,14 @@ alias k=kubectl
 # ===== Development Functions =====
 
 # Secure npm install alias with package age checking
-npm() {
+pnpm() {
 	if [[ "$1" == "install" || "$1" == "i" ]]; then
 		if [[ -f "tools/check-package-ages/check-package-ages.js" ]]; then
 			node tools/check-package-ages/check-package-ages.js "$@"
 		else
-			command npm "$@"
+			command pnpm "$@"
 		fi
 	else
-		command npm "$@"
+		command pnpm "$@"
 	fi
 }
