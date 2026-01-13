@@ -55,7 +55,7 @@ export default {
 	],
 	handlers: [
 		{
-			match: ({ opener }) => ["Slack"].includes(opener.name),
+			match: ({ opener }) => ["Slack", "Netbird"].includes(opener.name),
 			browser: browsers.work,
 		},
 		{

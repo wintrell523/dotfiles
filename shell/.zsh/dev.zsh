@@ -7,7 +7,6 @@ alias py=python3
 
 # ===== Package Managers =====
 alias y=yarn
-alias npm=pnpm
 
 # ===== Container & Orchestration =====
 alias k=kubectl

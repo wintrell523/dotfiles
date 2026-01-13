@@ -1,4 +1,5 @@
 tap "hashicorp/tap"
+tap "netbirdio/tap"
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
@@ -77,6 +78,8 @@ cask "appcleaner"
 cask "browserosaurus"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# AI code review CLI
+cask "coderabbit"
 # Allows switching between application windows
 cask "contexts"
 # Browser for SQLite databases

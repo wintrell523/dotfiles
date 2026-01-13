@@ -66,3 +66,6 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +a
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/shell/.zsh/.p10k.zsh.
+[[ ! -f ~/.dotfiles/shell/.zsh/.p10k.zsh ]] || source ~/.dotfiles/shell/.zsh/.p10k.zsh
