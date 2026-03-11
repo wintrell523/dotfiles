@@ -1,4 +1,4 @@
 [user]
 	name = Honza Urban
 	email = jan.urban@omnetic.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMOIRMiUkoiqx3xI7KrlLIN460bgw/ejkK0rqk9wvvKl
+	signingkey = ~/.ssh/eag.pub

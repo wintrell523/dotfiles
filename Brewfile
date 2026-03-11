@@ -1,3 +1,5 @@
+tap "2ykwang/2ykwang"
+tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "netbirdio/tap"
 tap "sijanc147/formulas"
@@ -40,6 +42,12 @@ brew "lighttpd", restart_service: :changed
 brew "mackup"
 # Mac App Store command-line interface
 brew "mas"
+# Deep clean and optimize your Mac
+brew "mole"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@24"
 # Smart, Fast and Extensible Build System
 brew "nx"
 # Pinentry for GPG on Mac
@@ -64,6 +72,8 @@ brew "tree"
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Vault
 brew "hashicorp/tap/vault"
 # Backup and Restore your Mac System and App Preferences
@@ -86,10 +96,6 @@ cask "contexts"
 cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
-# Collaborative team software
-cask "figma"
-# Utility for customizing which browser to start
-cask "finicky"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
@@ -101,16 +107,18 @@ cask "iterm2"
 cask "jordanbaird-ice@beta"
 # File archiver
 cask "keka"
-# Blocks all Keyboard and TouchBar input
-cask "keyboardcleantool"
 # Kubernetes IDE
 cask "lens"
 # Software for Logitech devices
 cask "logi-options+"
+# Markdown editor with live preview and syntax highlighting
+cask "macdown-3000"
 # Multi-platform web browser
 cask "microsoft-edge"
 # App to write, plan, collaborate, and get organised
 cask "notion"
+# AI coding agent desktop client
+cask "opencode-desktop"
 # Collaboration platform for API development
 cask "postman"
 # Control your tools with a few keystrokes
@@ -132,7 +140,7 @@ cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
 # A tool to toggle Macbook's infamous notch in one click with automation support
-cask "znotch"
+cask "zkondor/dist/znotch"
 mas "1Password for Safari", id: 1569813296
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704

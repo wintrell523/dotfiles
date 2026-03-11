@@ -5,6 +5,9 @@
 alias python=python3
 alias py=python3
 
+# ===== AI =====
+alias cl=claude
+
 # ===== Package Managers =====
 alias y=yarn
 

@@ -67,5 +67,13 @@ if [ -f "$HOME/.env" ]; then
   set +a
 fi
 
+# bun completions
+[ -s "/Users/wintrell/.bun/_bun" ] && source "/Users/wintrell/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/shell/.zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/shell/.zsh/.p10k.zsh ]] || source ~/.dotfiles/shell/.zsh/.p10k.zsh
