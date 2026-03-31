@@ -1,3 +1,5 @@
+[user]
+	email = honza@urban-cz.eu
 [includeIf "gitdir:~/work_projects/"]
 	path = ~/.dotfiles/git/.omnetic.gitconfig
 [includeIf "gitdir:~/Projects/"]
@@ -40,7 +42,5 @@
 	branch = yellow black bold ul
 [difftool "cursor"]
 	cmd = cursor --wait --diff \"$LOCAL\" \"$REMOTE\"
-[user]
-	email = honza@urban-cz.eu
 [coderabbit]
 	machineId = cli/0c4fab6cf76b49038d6e2b3981bbf644
