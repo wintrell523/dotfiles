@@ -84,7 +84,7 @@
   "workbench.editor.enablePreview": false,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Plastic - deprioritised punctuation",
-  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.untrustedFiles": "prompt",
   "debug.javascript.autoAttachFilter": "onlyWithFlag",
   "editor.unicodeHighlight.nonBasicASCII": false
 }
