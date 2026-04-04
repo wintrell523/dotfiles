@@ -28,8 +28,6 @@
       path: shell/.zshrc
       force: true
     ~/.vimrc: shell/.vimrc
-    ~/.npmrc: node/.npmrc
-    ~/.yarnrc: node/.yarnrc
     ~/.actrc: .actrc
     ~/.ssh/config:
       path: ssh/config
