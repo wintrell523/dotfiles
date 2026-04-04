@@ -4,8 +4,8 @@
 # ===== Basic Git Operations =====
 alias gf='git fetch -p'
 alias gc='git commit'
-alias gcm='git commit -m $1'
-alias gcme='git commit --allow-empty -m $1'
+function gcm() { git commit -m "$1"; }
+function gcme() { git commit --allow-empty -m "$1"; }
 alias gaa='git add .'
 alias ga='git add'
 alias gs='git status'
@@ -18,9 +18,15 @@ alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 # ===== Branch Operations =====
 alias gsw='git switch'
-alias gnb='git checkout -b $1'
-alias gdel='git branch -D $1'
+function gnb() { git checkout -b "$1"; }
+function gdel() { git branch -D "$@"; }
 alias gbr='git branch --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]" --sort=-committerdate'
+
+# ===== Worktree Operations =====
+alias gwl='git worktree list'
+function gwa() { local dir="${1//\//-}"; git worktree add -b "$1" "../$dir" && cd "../$dir" && git push --set-upstream origin "$1"; }
+function gwc() { local dir="${1//\//-}"; git worktree add "../$dir" "$1" && cd "../$dir"; }
+function gwr() { git worktree remove "../${1//\//-}"; }
 
 # ===== Stash Operations =====
 alias gsh='git stash'
@@ -34,7 +40,7 @@ alias gca='git commit --amend'
 # ===== Advanced Operations =====
 alias gfr='git fetch -p && git rebase -i origin/master'
 alias gfpr='git fetch && git pull && git rebase -i origin/master'
-alias gcp='git cherry-pick -x $1'
+function gcp() { git cherry-pick -x "$1"; }
 
 # ===== Git Functions =====
 
