@@ -13,7 +13,7 @@ alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up three directories
 
 # ===== Directory & File Operations =====
-alias mkdir='mkdir -p $1'
+alias mkdir='mkdir -p'
 
 # ===== Network Utilities =====
 # IP addresses
@@ -23,8 +23,7 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 # ===== Tree Command Fallback =====
 # Tree
-if [ ! -x "$(which tree 2>/dev/null)" ]
-then
+if (( ! $+commands[tree] )); then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 

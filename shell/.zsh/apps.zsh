@@ -6,7 +6,7 @@
 alias update='brew update && brew upgrade && brew upgrade --cask && mas upgrade'
 
 # ===== Shell Configuration =====
-alias zshrc='code ~/.zshrc'
+alias zshrc='cursor ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 
 # ===== Application Launchers =====
