@@ -33,19 +33,17 @@ fi
 # Load plugins
 zplug load
 
-# export ZSH="/Users/jan.urban/.oh-my-zsh"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages)
-# plugins=(git zsh-autosuggestions common-aliases colored-man-pages)
 
-# source $ZSH/oh-my-zsh.sh
-
-HIST_STAMPS="dd.mm.yyyy"
+# Zsh history configuration
+HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt EXTENDED_HISTORY       # Write timestamps to history
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicates first when trimming
+setopt HIST_IGNORE_DUPS       # Don't record duplicates
+setopt HIST_IGNORE_SPACE      # Don't record commands starting with space
+setopt HIST_VERIFY            # Show expanded history before executing
+setopt SHARE_HISTORY          # Share history across sessions
 
 # Source domain-organized configuration files
 [[ -f ~/.zsh/.env ]] && source ~/.zsh/.env
@@ -62,18 +60,15 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Load environment variables from .env file
 if [ -f "$HOME/.env" ]; then
-  set -a                   # export every variable that gets defined
-  source "$HOME/.env"
+  set -a
+  source "$HOME/.env" || true
   set +a
 fi
 
 # bun completions
-[ -s "/Users/wintrell/.bun/_bun" ] && source "/Users/wintrell/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/shell/.zsh/.p10k.zsh.
-[[ ! -f ~/.dotfiles/shell/.zsh/.p10k.zsh ]] || source ~/.dotfiles/shell/.zsh/.p10k.zsh
