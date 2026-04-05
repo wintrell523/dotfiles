@@ -1,9 +1,9 @@
 # Zsh plugins managed by antidote
 # See: https://getantidote.github.io/usage
 
-# Prompt theme — kind:fpath so p10k instant prompt works
-# (prompt is initialised via source ~/.zsh/.p10k.zsh in .zshrc)
-romkatv/powerlevel10k kind:fpath
+# Prompt theme — load only the theme file, not the p9k compat shim
+# p10k instant prompt is handled by the block at the top of .zshrc
+romkatv/powerlevel10k path:powerlevel10k.zsh-theme
 
 # Core plugins
 zsh-users/zsh-autosuggestions
