@@ -9,7 +9,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-  format = ssh
+  	format = ssh
 [core]
 	# windows->true, linux-> input
 	autocrlf = input
