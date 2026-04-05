@@ -2,12 +2,13 @@ tap "2ykwang/2ykwang"
 tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "netbirdio/tap"
+tap "peonping/tap"
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
 brew "act"
-# Plugin manager for zsh, inspired by oh-my-zsh and vundle
-brew "antigen"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Remove large files or passwords from Git history like git-filter-branch
@@ -76,6 +77,8 @@ brew "zsh"
 brew "anomalyco/tap/opencode"
 # Vault
 brew "hashicorp/tap/vault"
+# Sound effects and desktop notifications for AI coding agents
+brew "peonping/tap/peon-ping"
 # Backup and Restore your Mac System and App Preferences
 brew "sijanc147/formulas/macprefs"
 # Command-line interface for 1Password
@@ -86,8 +89,6 @@ cask "airbuddy"
 cask "appcleaner"
 # Open-source browser prompter
 cask "browserosaurus"
-# Terminal-based AI coding assistant
-cask "claude-code"
 # AI code review CLI
 cask "coderabbit"
 # Allows switching between application windows
@@ -117,6 +118,8 @@ cask "macdown-3000"
 cask "microsoft-edge"
 # App to write, plan, collaborate, and get organised
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # AI coding agent desktop client
 cask "opencode-desktop"
 # Collaboration platform for API development

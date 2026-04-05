@@ -1,4 +1,5 @@
 dotbot
 .env
+.DS_Store
 secrets/*.gpg
 !secrets/

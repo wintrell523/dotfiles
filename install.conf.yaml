@@ -19,6 +19,7 @@
     ~/.zsh/security.zsh: shell/.zsh/security.zsh
     ~/.zsh/personal.zsh: shell/.zsh/personal.zsh
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zsh/.zsh_plugins.txt: shell/.zsh/.zsh_plugins.txt
     ~/.zsh/.test-aliases: shell/.zsh/.test-aliases
     ~/.zsh/test-runner.sh: shell/.zsh/test-runner.sh
     ~/.zsh/.exports: shell/.exports
@@ -32,9 +33,6 @@
     ~/.vimrc:
       relink: true
       path: shell/.vimrc
-    # Node
-    ~/.npmrc: node/.npmrc
-    ~/.yarnrc: node/.yarnrc
     ~/.actrc: .actrc
     # SSH:
     ~/.ssh/config:
@@ -68,9 +66,6 @@
       stderr: true
       # include: ["tap", "brew"]
       include: ["tap", "brew", "cask", "mas"]
-      # Optional, if you want to run install command as another user:
-      sudo: brewuser
-
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile

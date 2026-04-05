@@ -12,9 +12,9 @@ alias gs='git status'
 
 # ===== Push/Pull Operations =====
 alias gpu='git push'
-alias gpf='git push -f'
+alias gpf='git push --force-with-lease'
 alias pul='git fetch -p && git pull --rebase'
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gpsup='git push --set-upstream origin $(git branch --show-current)'
 
 # ===== Branch Operations =====
 alias gsw='git switch'

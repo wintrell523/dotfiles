@@ -1,0 +1,17 @@
+# Zsh plugins managed by antidote
+# See: https://getantidote.github.io/usage
+
+# Prompt theme — kind:fpath so p10k instant prompt works
+# (prompt is initialised via source ~/.zsh/.p10k.zsh in .zshrc)
+romkatv/powerlevel10k kind:fpath
+
+# Core plugins
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+
+# Utilities
+djui/alias-tips
+hlissner/zsh-autopair kind:defer
+
+# Syntax highlighting — defer so it loads last
+zsh-users/zsh-syntax-highlighting kind:defer

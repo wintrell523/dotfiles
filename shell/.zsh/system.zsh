@@ -6,6 +6,33 @@ alias ls='eza -lah --git --icons'
 alias eza='eza -lah --git'
 alias cat='bat'
 alias cls='clear'
+alias grep='grep --color=auto'
+alias t='tail -f'
+alias h='history'
+alias hgrep='fc -El 0 | grep'
+alias p='ps -f'
+
+# ===== Safe File Operations =====
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ===== Disk Usage =====
+alias dud='du -d 1 -h'
+alias ff='find . -type f -name'
+
+# ===== Global Pipe Shortcuts =====
+# Usage: cmd G pattern, cmd H, cmd T, etc.
+alias -g G='| grep'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g L='| less'
+alias -g LL='2>&1 | less'
+alias -g NE='2>/dev/null'
+alias -g NUL='>/dev/null 2>&1'
+
+# ===== Colored Man Pages (via bat) =====
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # ===== Navigation Shortcuts =====
 alias ..='cd ..'         # Go up one directory
@@ -13,7 +40,7 @@ alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up three directories
 
 # ===== Directory & File Operations =====
-alias mkdir='mkdir -p $1'
+alias mkdir='mkdir -p'
 
 # ===== Network Utilities =====
 # IP addresses
@@ -23,8 +50,7 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 
 # ===== Tree Command Fallback =====
 # Tree
-if [ ! -x "$(which tree 2>/dev/null)" ]
-then
+if (( ! $+commands[tree] )); then
   alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 fi
 

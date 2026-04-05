@@ -9,7 +9,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-  format = ssh
+  	format = ssh
 [core]
 	# windows->true, linux-> input
 	autocrlf = input
@@ -20,10 +20,19 @@
 [diff]
 	mnemonicprefix = true
 	tool = cursor
+[init]
+	defaultBranch = main
 [pull]
 	rebase = true
 [push]
 	default = current
+[fetch]
+	prune = true
+[merge]
+	conflictstyle = zdiff3
+[rebase]
+	autoSquash = true
+	autoStash = true
 [color]
 	ui = auto
 [color "branch"]

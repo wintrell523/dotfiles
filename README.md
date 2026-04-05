@@ -10,10 +10,10 @@
 
     ```zsh
     # Use SSH (if set up)...
-    git clone git@github.com:wintrell523/my_dotfiles.git ~/.dotfiles
+    git clone git@github.com:wintrell523/dotfiles.git ~/.dotfiles
 
     # ...or use HTTPS and switch remotes later.
-    git clone https://github.com/wintrell523/my_dotfiles.git ~/.dotfiles
+    git clone https://github.com/wintrell523/dotfiles.git ~/.dotfiles
     ```
 
 3. Install Homebrew.
@@ -23,13 +23,7 @@
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
-4. Install Oh-My-ZSH
-
-    ```zsh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-
-5. Run dotbot install script
+4. Run dotbot install script
 
     ```zsh
     cd ~/.dotfiles
@@ -51,5 +45,5 @@ cd ~/.dotfiles
 ## TODO List
 
 -   Organize these growing steps into multiple script files.
--   Revisit the list in [`.zshrc`](.zshrc) to customize the shell.
+-   Revisit the list in [`.zshrc`](shell/.zshrc) to customize the shell.
 -   Find inspiration and examples in other Dotfiles repositories at [dotfiles.github.io](https://dotfiles.github.io/).
