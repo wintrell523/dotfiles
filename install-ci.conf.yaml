@@ -20,6 +20,7 @@
     ~/.zsh/security.zsh: shell/.zsh/security.zsh
     ~/.zsh/personal.zsh: shell/.zsh/personal.zsh
     ~/.zsh/.p10k.zsh: shell/.zsh/.p10k.zsh
+    ~/.zsh/.zsh_plugins.txt: shell/.zsh/.zsh_plugins.txt
     ~/.zsh/.test-aliases: shell/.zsh/.test-aliases
     ~/.zsh/test-runner.sh: shell/.zsh/test-runner.sh
     ~/.zsh/.exports: shell/.exports
