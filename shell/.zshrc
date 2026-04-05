@@ -18,8 +18,6 @@ source "${ZPLUG_HOME}/init.zsh"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "ohmyzsh/ohmyzsh", as:plugin, use:plugins/common-aliases
-zplug "ohmyzsh/ohmyzsh", as:plugin, use:plugins/colored-man-pages
 zplug "djui/alias-tips"
 zplug "hlissner/zsh-autopair", defer:2
 zplug "romkatv/powerlevel10k", as:theme

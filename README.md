@@ -23,13 +23,7 @@
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
-4. Install Oh-My-ZSH
-
-    ```zsh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-
-5. Run dotbot install script
+4. Run dotbot install script
 
     ```zsh
     cd ~/.dotfiles
