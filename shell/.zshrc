@@ -1,4 +1,4 @@
-# Load exports first (needed for zplug and other tools)
+# Load exports first (needed for tools and PATH)
 [[ -f ~/.zsh/.exports ]] && source ~/.zsh/.exports
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -8,28 +8,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Load zplug
-if [[ ! -d $ZPLUG_HOME ]]; then
-  git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
+# Load antidote plugin manager
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+
+# Generate static plugin file from .zsh_plugins.txt when it is outdated
+zsh_plugins=~/.zsh/.zsh_plugins
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
 fi
-source "${ZPLUG_HOME}/init.zsh"
-
-# zplug plugins
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "djui/alias-tips"
-zplug "hlissner/zsh-autopair", defer:2
-zplug "romkatv/powerlevel10k", as:theme
-
-# Install plugins if missing
-if ! zplug check --verbose; then
-  printf "\nInstalling missing zplug plugins...\n"
-  zplug install
-fi
-
-# Load plugins
-zplug load
+source ${zsh_plugins}.zsh
 
 
 # Zsh history configuration
