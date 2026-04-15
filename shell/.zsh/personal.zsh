@@ -4,7 +4,8 @@
 
 # ===== Project Navigation =====
 # Frontend projects (customize for your paths)
-alias cdfe='cd ~/work_projects/frontend-monorepo'
+alias cdfe='cd ~/work_projects/frontend'
+alias cdqa='cd ~/work_projects/qa-ai'
 
 # ===== Add your personal aliases here =====
 # Example:

@@ -19,13 +19,13 @@ alias gpsup='git push --set-upstream origin $(git branch --show-current)'
 # ===== Branch Operations =====
 alias gsw='git switch'
 function gnb() { git checkout -b "$1"; }
-function gdel() { git branch -D "$@"; }
+alias gdel='git branch -D'
 alias gbr='git branch --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]" --sort=-committerdate'
 
 # ===== Worktree Operations =====
 alias gwl='git worktree list'
-function gwa() { local dir="${1//\//-}"; git worktree add -b "$1" "../$dir" && cd "../$dir" && git push --set-upstream origin "$1"; }
-function gwc() { local dir="${1//\//-}"; git worktree add "../$dir" "$1" && cd "../$dir"; }
+function gwa() { local dir="${1//\//-}"; git worktree add -b "$1" "../$dir" && cd "../$dir" && git push --set-upstream origin "$1" && pnpm install; }
+function gwc() { local dir="${1//\//-}"; git worktree add "../$dir" "$1" && cd "../$dir" && pnpm install; }
 function gwr() { git worktree remove "../${1//\//-}"; }
 
 # ===== Stash Operations =====
@@ -33,7 +33,7 @@ alias gsh='git stash'
 alias gsp='git stash pop'
 
 # ===== History & Log Operations =====
-alias glg='git log --graph --pretty=format:"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]" --abbrev-commit -30'
+alias glg='git log --graph --decorate --pretty=format:"%C(bold blue)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]" --abbrev-commit -30'
 alias gun='git reset HEAD~1 --mixed'
 alias gca='git commit --amend'
 
