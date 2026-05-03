@@ -24,8 +24,8 @@ alias gbr='git branch --format="%(HEAD) %(color:yellow)%(refname:short)%(color:r
 
 # ===== Worktree Operations =====
 alias gwl='git worktree list'
-function gwa() { local dir="${1//\//-}"; git worktree add -b "$1" "../$dir" && cd "../$dir" && git push --set-upstream origin "$1" && pnpm install; }
-function gwc() { local dir="${1//\//-}"; git worktree add "../$dir" "$1" && cd "../$dir" && pnpm install; }
+function gwa() { local dir="${1//\//-}"; git worktree add -b "$1" "../$dir" && cd "../$dir" && git push --set-upstream origin "$1"; }
+function gwc() { local dir="${1//\//-}"; git worktree add "../$dir" "$1" && cd "../$dir"; }
 function gwr() { git worktree remove "../${1//\//-}"; }
 
 # ===== Stash Operations =====
