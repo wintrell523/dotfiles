@@ -42,7 +42,8 @@ alias test-digital-certificate='test_run -e dev -m build -a digital-certificate'
 alias agentDebug='test_run -e dev -m url -a dms -t "@agentDebug" -w -u "https://e2e.dev.omnetic.dev"'
 alias platform-regression='test_run -e dev -m url -a dms -t "@team:platform+@regression" -w -u "https://e2e.dev.omnetic.dev"'
 alias platform-merge-request='test_run -e dev -m url -a dms -t "@team:platform+@mergeRequest" -w -u "https://e2e.dev.omnetic.dev"'
-alias platform-regression-headless='test_run -e dev -m url -a dms -t "@team:platform+@regression" -u "https://e2e.dev.omnetic.dev"'
+alias platform-regression-headless='test_run -e dev -m url -a dms -t "@team:platform+@regression" -u "https://e2e.dev.omnetic.dev" 2>&1 | tee "e2e-regression-results-$(date +%Y%m%d-%H%M%S).log"'
+alias platform-regression-stage-headless='test_run -e stage -m url -a dms -t "@team:platform+@regression" -u "https://e2e.stage.omnetic.dev" 2>&1 | tee "e2e-regression-results-$(date +%Y%m%d-%H%M%S).log"'
 
 # URL-based testing (for testing against deployed environments)
 test-url() {
