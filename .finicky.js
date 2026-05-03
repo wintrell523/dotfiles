@@ -11,7 +11,7 @@ const browsers = {
 		openInBackground: false,
 	},
 	selector: {
-		name: "Browserosaurus",
+		name: "Browserino",
 		openInBackground: false,
 	},
 	discord: {

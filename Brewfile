@@ -1,4 +1,5 @@
 tap "2ykwang/2ykwang"
+tap "alexstrnik/browserino"
 tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "netbirdio/tap"
@@ -31,6 +32,8 @@ brew "eza"
 brew "git"
 # Quickly rewrite git repository history
 brew "git-filter-repo"
+# Open-source GitLab command-line tool
+brew "glab"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
@@ -65,6 +68,8 @@ brew "python@3.10"
 brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
 # Text interface for Git repositories
 brew "tig"
 # Display directories as trees (with optional color/HTML output)
@@ -87,16 +92,16 @@ cask "1password-cli"
 cask "airbuddy"
 # Application uninstaller
 cask "appcleaner"
-# Open-source browser prompter
-cask "browserosaurus"
-# AI code review CLI
-cask "coderabbit"
+# Browserino is a tiny browser selector for MacOS written in SwiftUI
+cask "alexstrnik/browserino/browserino"
 # Allows switching between application windows
 cask "contexts"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
+# Utility for customizing which browser to start
+cask "finicky"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
@@ -120,8 +125,6 @@ cask "microsoft-edge"
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# AI coding agent desktop client
-cask "opencode-desktop"
 # Collaboration platform for API development
 cask "postman"
 # Control your tools with a few keystrokes
@@ -147,6 +150,7 @@ cask "zkondor/dist/znotch"
 mas "1Password for Safari", id: 1569813296
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
+mas "Calendar 366", id: 6502818600
 mas "Hidden Bar", id: 1452453066
 mas "HP", id: 1474276998
 mas "HP Easy Scan", id: 967004861
