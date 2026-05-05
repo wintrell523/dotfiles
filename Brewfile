@@ -86,14 +86,24 @@ brew "hashicorp/tap/vault"
 brew "peonping/tap/peon-ping"
 # Backup and Restore your Mac System and App Preferences
 brew "sijanc147/formulas/macprefs"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
 # AirPods companion app
 cask "airbuddy"
+# Uninstaller and cleaning assistant
+cask "app-cleaner"
 # Application uninstaller
 cask "appcleaner"
+# Chromium based browser
+cask "arc"
+# Online gaming platform
+cask "battle-net"
 # Browserino is a tiny browser selector for MacOS written in SwiftUI
 cask "alexstrnik/browserino/browserino"
+# E-books management software
+cask "calibre"
 # Allows switching between application windows
 cask "contexts"
 # Browser for SQLite databases
@@ -105,6 +115,8 @@ cask "finicky"
 cask "font-fira-code"
 # Web browser
 cask "google-chrome"
+# Utility to hide menu bar items
+cask "hiddenbar"
 # Free and open-source media player
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -113,6 +125,8 @@ cask "iterm2"
 cask "jordanbaird-ice@beta"
 # File archiver
 cask "keka"
+# End-to-end encryption software
+cask "keybase"
 # Kubernetes IDE
 cask "lens"
 # Software for Logitech devices
@@ -125,6 +139,10 @@ cask "microsoft-edge"
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Cloud storage client
+cask "onedrive"
+# Verify system files structure, run miscellaneous maintenance and more
+cask "onyx"
 # Collaboration platform for API development
 cask "postman"
 # Control your tools with a few keystrokes
@@ -137,12 +155,16 @@ cask "slack"
 cask "spotify"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# Companion app for the Trezor hardware wallet
+cask "trezor-suite"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Voice-to-text dictation with AI-powered auto-editing
+cask "wispr-flow"
 # Multiplayer code editor
 cask "zed"
 # A tool to toggle Macbook's infamous notch in one click with automation support
@@ -151,7 +173,6 @@ mas "1Password for Safari", id: 1569813296
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Calendar 366", id: 6502818600
-mas "Hidden Bar", id: 1452453066
 mas "HP", id: 1474276998
 mas "HP Easy Scan", id: 967004861
 mas "Keynote", id: 409183694
