@@ -54,12 +54,16 @@ brew "node"
 brew "node@24"
 # Smart, Fast and Extensible Build System
 brew "nx"
+# Open-source vector similarity search for Postgres
+brew "pgvector"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Object-relational database system
+brew "postgresql@18", link: true
 # Implementation of Telnet and SSH
 brew "putty"
 # Interpreted, interactive, object-oriented programming language
@@ -262,3 +266,7 @@ vscode "vscode-icons-team.vscode-icons"
 vscode "wholroyd.jinja"
 vscode "will-stone.plastic"
 vscode "yzhang.markdown-all-in-one"
+npm "@playwright/cli"
+npm "greptile"
+npm "husky"
+npm "playwriter"

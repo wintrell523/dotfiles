@@ -2,6 +2,8 @@
 	email = honza@urban-cz.eu
 [includeIf "gitdir:~/work_projects/"]
 	path = ~/.dotfiles/git/.omnetic.gitconfig
+[includeIf "gitdir:~/work_projects/github/"]
+	path = ~/.dotfiles/git/.personal.gitconfig
 [includeIf "gitdir:~/Projects/"]
 	path = ~/.dotfiles/git/.personal.gitconfig
 [includeIf "gitdir:~/.dotfiles/"]
