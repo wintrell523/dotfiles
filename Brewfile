@@ -1,9 +1,9 @@
 tap "2ykwang/2ykwang"
-tap "alexstrnik/browserino"
-tap "anomalyco/tap"
-tap "hashicorp/tap"
-tap "netbirdio/tap"
-tap "peonping/tap"
+tap "alexstrnik/browserino", "https://github.com/AlexStrNik/homebrew-Browserino", trusted: true
+tap "anomalyco/tap", trusted: true
+tap "hashicorp/tap", trusted: true
+tap "netbirdio/tap", trusted: true
+tap "peonping/tap", "https://github.com/PeonPing/homebrew-tap", trusted: true
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
@@ -18,8 +18,8 @@ brew "bfg"
 brew "cmatrix"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
+# Create and run Linux containers using lightweight virtual machines
+brew "container", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker
@@ -28,6 +28,8 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Modern, maintained replacement for ls
 brew "eza"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -89,7 +91,7 @@ brew "hashicorp/tap/vault"
 # Sound effects and desktop notifications for AI coding agents
 brew "peonping/tap/peon-ping"
 # Backup and Restore your Mac System and App Preferences
-brew "sijanc147/formulas/macprefs"
+brew "sijanc147/formulas/macprefs", trusted: true
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -165,14 +167,12 @@ cask "trezor-suite"
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
-# Native desktop client for WhatsApp
-cask "whatsapp"
 # Voice-to-text dictation with AI-powered auto-editing
 cask "wispr-flow"
 # Multiplayer code editor
 cask "zed"
 # A tool to toggle Macbook's infamous notch in one click with automation support
-cask "zkondor/dist/znotch"
+cask "zkondor/dist/znotch", trusted: true
 mas "1Password for Safari", id: 1569813296
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
@@ -214,8 +214,6 @@ vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "g-fidalgo.cypress-runner"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
 vscode "gruntfuggly.todo-tree"

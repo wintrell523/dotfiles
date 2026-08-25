@@ -18,10 +18,10 @@
 	safecrlf = false
 	# must be absolute path
 	excludesfile = ~/.gitignore_global
-	editor = cursor --wait
+	editor = code --wait
 [diff]
 	mnemonicprefix = true
-	tool = cursor
+	tool = code
 [init]
 	defaultBranch = main
 [pull]
@@ -51,7 +51,5 @@
 	changed = red bold
 	untracked = cyan
 	branch = yellow black bold ul
-[difftool "cursor"]
-	cmd = cursor --wait --diff \"$LOCAL\" \"$REMOTE\"
-[coderabbit]
-	machineId = cli/0c4fab6cf76b49038d6e2b3981bbf644
+[difftool "code"]
+	cmd =  code --wait --diff \"$LOCAL\" \"$REMOTE\"
