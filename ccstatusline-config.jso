@@ -1,0 +1,161 @@
+{
+  "version": 4,
+  "lines": [
+    [
+      {
+        "id": "1",
+        "type": "model",
+        "color": "brightBlue"
+      },
+      {
+        "id": "d9ecfcb4-3dad-4c0d-8be8-93d1130538f1",
+        "type": "separator"
+      },
+      {
+        "id": "6a0d8d3c-3c4e-4d07-8188-8e0a47ea2a4a",
+        "type": "thinking-effort",
+        "color": "brightBlue"
+      },
+      {
+        "id": "11226e35-c104-4e30-a897-62c840852237",
+        "type": "separator"
+      },
+      {
+        "id": "3",
+        "type": "context-length",
+        "color": "brightCyan"
+      },
+      {
+        "id": "07ae16c1-03a0-4c49-983d-83225f8cff2a",
+        "type": "separator"
+      },
+      {
+        "id": "5",
+        "type": "context-bar",
+        "color": "brightCyan"
+      }
+    ],
+    [
+      {
+        "id": "c4357845-aacb-4074-a0f8-c5def29c6c62",
+        "type": "git-root-dir",
+        "color": "brightBlue"
+      },
+      {
+        "id": "f61dd0a0-6494-4b34-91e7-290ac6e8703c",
+        "type": "separator"
+      },
+      {
+        "id": "214fc283-fcf7-42a7-80fe-45b3e67bafc1",
+        "type": "git-branch",
+        "color": "brightYellow"
+      },
+      {
+        "id": "27356a0b-b4e3-4b9f-8a1b-94c2a07d5cc5",
+        "type": "separator"
+      },
+      {
+        "id": "9c5f5ec3-8ae9-4862-b86a-4a7b362dfcc1",
+        "type": "git-changes",
+        "color": "brightYellow"
+      },
+      {
+        "id": "eaa4b8d2-bf77-47d7-8004-494fd4e9dfe1",
+        "type": "separator"
+      },
+      {
+        "id": "a22dfb61-02f0-477d-b34d-0a295ee9b7bc",
+        "type": "session-clock",
+        "color": "brightGreen"
+      },
+      {
+        "id": "59425540-9900-4a47-9681-ad1c3e46af13",
+        "type": "separator"
+      },
+      {
+        "id": "03d8415d-4da0-41a4-b826-e1d8111a5401",
+        "type": "session-cost",
+        "color": "brightGreen"
+      }
+    ],
+    [
+      {
+        "id": "4f73cf09-b250-4a4d-a3a6-1e5e758a44a9",
+        "type": "weekly-opus-usage",
+        "color": "cyan"
+      },
+      {
+        "id": "a978dad7-fbec-43a1-8bb7-2089846bd91d",
+        "type": "separator"
+      },
+      {
+        "id": "c42b619d-2b8f-4b38-89d1-7a83c9e4dacc",
+        "type": "fable-weekly-usage",
+        "color": "cyan"
+      },
+      {
+        "id": "78f6a31e-a080-45d3-8d52-7ba8183d21c5",
+        "type": "separator"
+      },
+      {
+        "id": "941d451f-20f9-47c6-aec9-b81f2f9d28a3",
+        "type": "weekly-usage",
+        "color": "cyan"
+      },
+      {
+        "id": "cc4b2dcc-2d84-4668-b7ea-b0e9baf022be",
+        "type": "separator"
+      },
+      {
+        "id": "ccb25203-1a05-47db-a9d1-39a51a190559",
+        "type": "weekly-reset-timer",
+        "color": "brightWhite"
+      }
+    ],
+    [
+      {
+        "id": "7209e333-dade-477c-a11e-68482595451f",
+        "type": "session-usage"
+      }
+    ],
+    [
+      {
+        "id": "987aa3e2-7adf-438d-827b-5e12f9edd278",
+        "type": "skills",
+        "color": "brightRed"
+      },
+      {
+        "id": "0ca40294-46c2-4215-a31e-8f19846b7b89",
+        "type": "separator"
+      }
+    ]
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPadding": " ",
+  "defaultPaddingSide": "both",
+  "inheritSeparatorColors": false,
+  "globalBold": true,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [
+      ""
+    ],
+    "endCaps": [
+      ""
+    ],
+    "theme": "catppuccin",
+    "autoAlign": true,
+    "continueThemeAcrossLines": false
+  },
+  "exportedBy": "2.2.29"
+}
