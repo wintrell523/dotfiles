@@ -42,6 +42,14 @@ cd ~/.dotfiles
 
 ---
 
+## Agent configuration
+
+See [agents/README.md](agents/README.md) for personal instruction links, settings
+templates, integration setup, and migration notes. Back up existing instruction
+files before enabling the new links.
+
+---
+
 ## TODO List
 
 -   Organize these growing steps into multiple script files.
