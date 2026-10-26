@@ -1,13 +1,18 @@
 tap "2ykwang/2ykwang"
-tap "alexstrnik/browserino", "https://github.com/AlexStrNik/homebrew-Browserino", trusted: true
+tap "alexstrnik/browserino", trusted: true
 tap "anomalyco/tap", trusted: true
 tap "hashicorp/tap", trusted: true
+tap "lightpanda-io/browser"
 tap "netbirdio/tap", trusted: true
 tap "peonping/tap", "https://github.com/PeonPing/homebrew-tap", trusted: true
 tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
 brew "act"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Browser automation CLI for AI agents
+brew "agent-browser"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -36,6 +41,10 @@ brew "git"
 brew "git-filter-repo"
 # Open-source GitLab command-line tool
 brew "glab"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Agent multiplexer that lives in your terminal
+brew "herdr"
 # Improved top (interactive process viewer)
 brew "htop"
 # Modern load testing tool, using Go and JavaScript
@@ -51,11 +60,11 @@ brew "mas"
 # Deep clean and optimize your Mac
 brew "mole"
 # Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Open-source, cross-platform JavaScript runtime environment
 brew "node@24"
 # Smart, Fast and Extensible Build System
 brew "nx"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Open-source vector similarity search for Postgres
 brew "pgvector"
 # Pinentry for GPG on Mac
@@ -84,10 +93,10 @@ brew "tree"
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
-# The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
 # Vault
 brew "hashicorp/tap/vault"
+# Headless browser for AI agents and automation
+brew "lightpanda-io/browser/lightpanda", trusted: true
 # Sound effects and desktop notifications for AI coding agents
 brew "peonping/tap/peon-ping"
 # Backup and Restore your Mac System and App Preferences
@@ -110,6 +119,8 @@ cask "battle-net"
 cask "alexstrnik/browserino/browserino"
 # E-books management software
 cask "calibre"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Allows switching between application windows
 cask "contexts"
 # Browser for SQLite databases
@@ -119,10 +130,13 @@ cask "discord"
 # Utility for customizing which browser to start
 cask "finicky"
 cask "font-fira-code"
+cask "font-monaspace"
 # Web browser
 cask "google-chrome"
 # Utility to hide menu bar items
 cask "hiddenbar"
+# Homebrew's official GUI
+cask "homebrew-app"
 # Free and open-source media player
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -139,8 +153,6 @@ cask "lens"
 cask "logi-options+"
 # Markdown editor with live preview and syntax highlighting
 cask "macdown-3000"
-# Multi-platform web browser
-cask "microsoft-edge"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -264,6 +276,7 @@ vscode "vscode-icons-team.vscode-icons"
 vscode "wholroyd.jinja"
 vscode "will-stone.plastic"
 vscode "yzhang.markdown-all-in-one"
+npm "@caveman-ai/cli"
 npm "@playwright/cli"
 npm "greptile"
 npm "husky"

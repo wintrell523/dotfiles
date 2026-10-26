@@ -6,7 +6,7 @@ This repository manages macOS dotfiles with Dotbot. `install` selects `install.c
 
 - `shell/`: shell startup files, exports, and Vim settings; `shell/.zsh/` groups aliases and functions by domain (`git.zsh`, `dev.zsh`, `security.zsh`).
 - `git/`, `ssh/`, `vscode/`, and `iterm2/`: application settings, snippets, profiles, and color schemes.
-- `Brewfile`: packages, applications, and extensions; `node/npm-globals.txt`: global npm packages.
+- `Brewfile`: packages, applications, extensions, and global npm packages.
 - `scripts/`: maintenance utilities. `dotbot/` and `dotbot-brewfile/` are Git submodules; keep dependency changes separate from configuration edits.
 - `agents/`: personal instructions, settings templates, and setup notes. `tests/`: isolated agent-link checks.
 
