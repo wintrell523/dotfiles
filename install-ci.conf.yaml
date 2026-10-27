@@ -13,12 +13,12 @@
 
 - link:
     # Personal agent instructions (existing regular files require a manual backup)
-    ~/.codex/AGENTS.md:
-      path: agents/codex/AGENTS.md
-      create: true
-    ~/.claude/CLAUDE.md:
-      path: agents/claude/CLAUDE.md
-      create: true
+    # ~/.codex/AGENTS.md:
+    #   path: agents/codex/AGENTS.md
+    #   create: true
+    # ~/.claude/CLAUDE.md:
+    #   path: agents/claude/CLAUDE.md
+    #   create: true
     # Domain-organized shell files
     ~/.zsh/git.zsh: shell/.zsh/git.zsh
     ~/.zsh/system.zsh: shell/.zsh/system.zsh

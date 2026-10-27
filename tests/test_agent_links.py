@@ -27,8 +27,11 @@ class AgentLinksTest(unittest.TestCase):
 					for destination, options in task.get("link", {}).items()
 					if isinstance(options, dict) and options.get("path", "").startswith("agents/")
 				}
-				self.assertEqual(set(links), {"~/.codex/AGENTS.md", "~/.claude/CLAUDE.md"})
+				# Both links may be disabled while the live instructions are hand-managed.
+				self.assertIn(set(links), ({"~/.codex/AGENTS.md", "~/.claude/CLAUDE.md"}, set()))
 				mappings.append(links)
+				if not links:
+					continue
 				defaults = [task for task in config if "defaults" in task]
 				with tempfile.TemporaryDirectory(prefix="agent-links-") as directory:
 					home = Path(directory)
