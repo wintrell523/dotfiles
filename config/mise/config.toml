@@ -1,0 +1,85 @@
+# mise: the one toolchain manager for Node, pnpm and the AI CLI tools.
+#
+# Why mise and not nvm, Homebrew or `npm install -g`:
+#
+#   * The EAG repositories pin their Node version in `.nvmrc`
+#     (omnetic-frontend: 24.13.0). mise reads that file and switches the
+#     version when you enter the directory. Homebrew cannot do that.
+#   * One binary directory (the shims) holds every tool, so `node`, `pnpm` and
+#     `codex` mean the same thing in every terminal and in every script.
+#
+# Change nothing here unless a repository needs another version. `mise install`
+# applies this file; `update.sh` keeps it current.
+
+[tools]
+# Node. "lts" covers general work; 24, 22 and 20 cover the versions the
+# repositories pin today (omnetic-frontend needs >= 24.12.0, storage-service
+# pins 22.x, carvago-frontend pins ^20.18.2 in its `engines` and 20.18.1 in
+# `.nvmrc`). A repository that pins an exact patch version downloads that patch
+# the first time you enter its directory, and mise keeps it afterwards.
+#
+# npm needs no entry: every Node installation ships its own npm.
+node = ["lts", "24", "22", "20"]
+
+# pnpm is the package manager of omnetic-frontend (`engines` says >= 11.9.0).
+# Never install dependencies there with npm or yarn.
+#
+# The repository also pins `packageManager: pnpm@11.22.0`. pnpm reads that field
+# and switches to the pinned version by itself, so the version here only has to
+# be recent enough to do the switch.
+pnpm = "latest"
+
+# yarn 4 is the package manager of carvago-frontend (`packageManager:
+# yarn@4.6.0`) and storage-service (`packageManager: yarn@4.9.3`). Never use it
+# in the pnpm repositories: it corrupts their lockfile.
+yarn = "4"
+
+# Nx runs every task in omnetic-frontend. The repository documentation
+# writes the commands as `nx serve dms` and `nx run-many -t typecheck`, which
+# needs the command on PATH; the global Nx then hands the work to the version
+# the repository pins, so it cannot drift from the workspace.
+"npm:nx" = "latest"
+
+# --- AI coding agents -----------------------------------------------------
+# Codex ships as an npm package, but it must not live *inside* a Node
+# installation. `npm install -g` puts a package in the bin directory of the
+# active Node version, so the tool disappears the moment a repository pins
+# another version. The npm backend of mise installs each package under its own
+# prefix instead, so one command works in every directory.
+#
+# Claude Code is deliberately absent: it comes from its own installer in
+# ~/.local/share/claude, is a real binary that needs no Node at all, and updates
+# in place with `claude update`. The bootstrap script installs it.
+"npm:@openai/codex" = "latest"
+
+# --- browser automation ----------------------------------------------------
+# Four command line tools, in the npm backend for the same reason Codex is: a
+# package installed with `npm install -g` disappears the moment a repository
+# pins another Node version. What each one is for: browser/README.md.
+#
+# agent-browser is the default. One command per step, and it prints what a
+# change-and-look loop needs — `console`, `errors --json`, `diff snapshot`,
+# `vitals` — without a Playwright script written around it first. The other
+# three stay for the three things it cannot do.
+"npm:agent-browser" = "latest"
+# playwriter is the one tool that reaches the everyday Chrome, with its logins,
+# through a browser extension. Nothing else here can do that.
+"npm:playwriter" = "latest"
+# playwright-cli is for Playwright end-to-end tests: writing them, running them
+# and healing them. Looking at a page is agent-browser's job.
+#
+# mise 2026.9.2 rejects 0.1.19 because npm omitted its provenance attestation.
+# npm signs the CLI and its exact Playwright dependencies with Microsoft's
+# Playwright key; the CLI's published files match the Microsoft v0.1.19 tag,
+# and the dependencies' browser manifest matches the Microsoft source
+# (checked 2026-09-08). Exempt only these verified releases. A later release
+# still has to pass mise's normal provenance check.
+"npm:@playwright/cli" = { version = "latest", trust_policy_excludes = ["@playwright/cli@0.1.19", "playwright@1.63.0-alpha-2026-08-31", "playwright-core@1.63.0-alpha-2026-08-31"] }
+# chrome-devtools is for heap snapshots and the DevTools performance insights
+# `agent-browser vitals` does not print.
+"npm:chrome-devtools-mcp" = "latest"
+
+[settings]
+# Read .nvmrc and .node-version. mise ignores both files unless the tool is
+# named here, and every EAG frontend repository pins its version that way.
+idiomatic_version_file_enable_tools = ["node"]

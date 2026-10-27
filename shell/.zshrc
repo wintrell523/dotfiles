@@ -8,13 +8,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Load antidote plugin manager
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
 # Generate static plugin file from .zsh_plugins.txt when it is outdated
 zsh_plugins=~/.zsh/.zsh_plugins
 if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+	(
+		# Load antidote plugin manager
+		source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+		antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+	)
 fi
 source ${zsh_plugins}.zsh
 

@@ -16,6 +16,10 @@ alias as-pw-ui='nx run admin-service-playwright-e2e:e2e-ui'
 function dms-pw-fix() { local file="$1"; shift; nx run dms-playwright-e2e:aigen -- --file "$file" "$@"; }
 function as-pw-fix() { local file="$1"; shift; nx run admin-service-playwright-e2e:aigen -- --file "$file" "$@"; }
 
+# ===== Vault =====
+alias vdev='vault login -address=https://vault.dev.i.omnetic.dev'
+alias vstg='vault login -address=https://vault.stage.i.omnetic.dev'
+
 # ===== Package Managers =====
 alias y=yarn
 
@@ -23,16 +27,3 @@ alias y=yarn
 alias k=kubectl
 
 # ===== Development Functions =====
-
-# Secure npm install alias with package age checking
-pnpm() {
-	if [[ "$1" == "install" || "$1" == "i" ]]; then
-		if [[ -f "tools/check-package-ages/check-package-ages.js" ]]; then
-			node tools/check-package-ages/check-package-ages.js "$@"
-		else
-			command pnpm "$@"
-		fi
-	else
-		command pnpm "$@"
-	fi
-}

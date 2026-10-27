@@ -22,12 +22,14 @@
 [diff]
 	mnemonicprefix = true
 	tool = code
+	algorithm = histogram
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
 [push]
 	default = current
+	autoSetupRemote = true
 [fetch]
 	prune = true
 [merge]
@@ -53,3 +55,5 @@
 	branch = yellow black bold ul
 [difftool "code"]
 	cmd =  code --wait --diff \"$LOCAL\" \"$REMOTE\"
+[rerere]
+	enabled = true

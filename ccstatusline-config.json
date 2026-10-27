@@ -138,6 +138,8 @@
   "inheritSeparatorColors": false,
   "globalBold": true,
   "gitCacheTtlSeconds": 5,
+  "terminalWidthCacheTtlSeconds": 5,
+  "customCommandCacheTtlSeconds": 0,
   "minimalistMode": false,
   "powerline": {
     "enabled": false,
@@ -157,5 +159,5 @@
     "autoAlign": true,
     "continueThemeAcrossLines": false
   },
-  "exportedBy": "2.2.29"
+  "exportedBy": "2.2.32"
 }

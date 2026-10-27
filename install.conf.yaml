@@ -11,6 +11,13 @@
     - ~/.gnupg
 
 - link:
+    # Personal agent instructions (existing regular files require a manual backup)
+    # ~/.codex/AGENTS.md:
+    #   path: agents/codex/AGENTS.md
+    #   create: true
+    # ~/.claude/CLAUDE.md:
+    #   path: agents/claude/CLAUDE.md
+    #   create: true
     # Domain-organized shell files
     ~/.zsh/git.zsh: shell/.zsh/git.zsh
     ~/.zsh/system.zsh: shell/.zsh/system.zsh
@@ -27,6 +34,9 @@
     ~/.zprofile:
       force: true
       path: shell/.zprofile
+    ~/.zshenv:
+      force: true
+      path: shell/.zshenv
     ~/.zshrc:
       force: true
       path: shell/.zshrc
@@ -42,6 +52,19 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
+    # ~/.config apps
+    ~/.config/gh/config.yml:
+      path: config/gh/config.yml
+      create: true
+    ~/.config/mise/config.toml:
+      path: config/mise/config.toml
+      create: true
+    ~/.config/mole/whitelist:
+      path: config/mole/whitelist
+      create: true
+    ~/.config/zed/settings.json:
+      path: config/zed/settings.json
+      create: true
     # # VSC
     # "~/Library/Application Support/Code/User/settings.json":
     #   path: vscode/settings.json
@@ -51,6 +74,8 @@
     ~/.finicky.js: .finicky.js
     # Mackup config
     ~/.mackup.cfg: .mackup.cfg
+    # ccstatusline
+    ~/ccstatusline-config.json: ccstatusline-config.json
     # GPG:
     ~/.gnupg/gpg-agent.conf:
       path: shell/gpgagent
@@ -64,16 +89,12 @@
     brewfile:
       stdout: true
       stderr: true
-      # include: ["tap", "brew"]
-      include: ["tap", "brew", "cask", "mas"]
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
 
-- brewfile:
-    file: Brewfile
-    no-upgrade: true
-    stdout: true
-    stderr: true
-    # Brewfile now has vscode plugins:
-    include: ["vscode"]
+- shell:
+    - command: curl -fsSL https://claude.ai/install.sh | bash
+      description: Installing Claude Code
+      stdout: true
+      stderr: true

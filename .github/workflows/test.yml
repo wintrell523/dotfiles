@@ -18,6 +18,9 @@ jobs:
           git submodule deinit -f .
           git submodule update --init --recursive
 
+      - name: Verify agent links and settings templates
+        run: python3 tests/test_agent_links.py
+
       - name: Install Homebrew
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

@@ -63,4 +63,5 @@ desktop.ini
 .iml
 *.sublime-workspace
 .history
+**/.claude/settings.local.json
 **/.claude/.cc-writes/
