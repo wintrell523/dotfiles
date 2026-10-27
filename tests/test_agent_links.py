@@ -10,7 +10,7 @@ import tomllib
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "dotbot/lib/pyyaml/lib3"))
+sys.path.insert(0, str(ROOT / "dotbot/lib/pyyaml/lib"))
 import yaml
 
 
