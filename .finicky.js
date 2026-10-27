@@ -35,15 +35,53 @@ export default {
 	},
 	rewrite: [
 		{
-			match: () => true,
+			match: (m) => true,
 			url: (url) => {
-				const removeKeysStartingWith = ["utm_", "uta_"];
-				const removeKeys = ["fbclid", "gclid"];
-				for (const key of [...url.searchParams.keys()]) {
-					if (removeKeysStartingWith.some((prefix) => key.startsWith(prefix)) || removeKeys.includes(key)) {
+				const lower = (s) => String(s || "").toLowerCase();
+				const removeExact = new Set([
+					"fbclid",
+					"gclid",
+					"dclid",
+					"gbraid",
+					"wbraid",
+					"msclkid",
+					"ttclid",
+					"twclid",
+					"li_fat_id",
+					"mkt_tok",
+					"mc_cid",
+					"mc_eid",
+					"igsh",
+					"si",
+					"feature",
+					"ref",
+					"ref_src",
+					"spm",
+				]);
+				const removePrefixes = ["utm_", "uta_", "ga_", "pk_", "vero_"];
+				const removeByValue = new Set(["share", "social", "social_media", "social_network"]);
+
+				const keys = [...url.searchParams.keys()];
+
+				for (const key of keys) {
+					const k = lower(key),
+						v = lower(url.searchParams.get(key));
+					const isExact = removeExact.has(k);
+					const isPrefix = removePrefixes.some((p) => k.startsWith(p));
+					const isValueNoise = (k === "source" || k === "src" || k === "medium") && removeByValue.has(v);
+
+					if (isExact || isPrefix || isValueNoise) {
 						url.searchParams.delete(key);
 					}
 				}
+
+				return url.href;
+			},
+		},
+		{
+			match: (url) => url.protocol === "http:",
+			url: (url) => {
+				url.protocol = "https:";
 				return url;
 			},
 		},
@@ -73,6 +111,10 @@ export default {
 			browser: browsers.work,
 		},
 		{
+			match: (url) => url.hostname.endsWith(".eag-group.cloud"),
+			browser: browsers.work,
+		},
+		{
 			match: /^https?:\/\/carvago\.atlassian\.net\/.*$/,
 			browser: browsers.work,
 		},
@@ -85,7 +127,7 @@ export default {
 			browser: browsers.figma,
 		},
 		{
-			match: finicky.matchHostnames("open.spotify.com"),
+			match: (url) => url.hostname === "open.spotify.com",
 			browser: browsers.spotify,
 		},
 	],
