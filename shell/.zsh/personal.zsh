@@ -4,8 +4,9 @@
 
 # ===== Project Navigation =====
 # Frontend projects (customize for your paths)
-alias cdfe='cd ~/work_projects/frontend'
-alias cdqa='cd ~/work_projects/qa-ai'
+alias cdfe='cd ~/work_projects/omnetic/frontend-monorepo'
+alias cdbe='cd ~/work_projects/omnetic/backend-monorepo'
+alias cdqa='cd ~/work_projects/omnetic/qa-ai-playground'
 alias cdom='cd ~/work_projects/omnetic_master'
 alias om=/Users/wintrell/work_projects/omnetic_master/om
 

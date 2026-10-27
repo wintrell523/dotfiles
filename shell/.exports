@@ -12,6 +12,7 @@ export EDITOR=vim
 
 # PATH exports
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/opt/homebrew/bin/brew/go/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"; export PATH="$(/opt/homebrew/bin/brew --prefix grep)/libexec/gnubin:$PATH"
 eval "$(mise activate zsh)"
 
