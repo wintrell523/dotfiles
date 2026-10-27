@@ -6,6 +6,8 @@
 # Frontend projects (customize for your paths)
 alias cdfe='cd ~/work_projects/frontend'
 alias cdqa='cd ~/work_projects/qa-ai'
+alias cdom='cd ~/work_projects/omnetic_master'
+alias om=/Users/wintrell/work_projects/omnetic_master/om
 
 # ===== Add your personal aliases here =====
 # Example:

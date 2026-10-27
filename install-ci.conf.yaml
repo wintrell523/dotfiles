@@ -32,6 +32,9 @@
     ~/.zsh/test-runner.sh: shell/.zsh/test-runner.sh
     ~/.zsh/.exports: shell/.exports
     ~/.zsh/.env: shell/.env
+    ~/.zshenv:
+      force: true
+      path: shell/.zshenv
     ~/.zshrc:
       path: shell/.zshrc
       force: true
@@ -43,6 +46,19 @@
       create: true
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
+    # ~/.config apps
+    ~/.config/gh/config.yml:
+      path: config/gh/config.yml
+      create: true
+    ~/.config/mise/config.toml:
+      path: config/mise/config.toml
+      create: true
+    ~/.config/mole/whitelist:
+      path: config/mole/whitelist
+      create: true
+    ~/.config/zed/settings.json:
+      path: config/zed/settings.json
+      create: true
     ~/.finicky.js: .finicky.js
     ~/.mackup.cfg: .mackup.cfg
     ~/.gnupg/gpg-agent.conf:

@@ -9,12 +9,10 @@ tap "sijanc147/formulas"
 tap "zkondor/dist"
 # Run your GitHub Actions locally
 brew "act"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Browser automation CLI for AI agents
-brew "agent-browser"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Remove large files or passwords from Git history like git-filter-branch
@@ -33,6 +31,12 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Replace zsh completion selection menu with fzf
+brew "fzf-tab"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -43,10 +47,14 @@ brew "git-filter-repo"
 brew "glab"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# GNU grep, egrep and fgrep
+brew "grep"
 # Agent multiplexer that lives in your terminal
 brew "herdr"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
 # Kubernetes command-line interface
@@ -59,10 +67,6 @@ brew "mackup"
 brew "mas"
 # Deep clean and optimize your Mac
 brew "mole"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node@24"
-# Smart, Fast and Extensible Build System
-brew "nx"
 # Create, run, and share large language models (LLMs)
 brew "ollama", restart_service: :changed
 # Open-source vector similarity search for Postgres
@@ -71,8 +75,6 @@ brew "pgvector"
 brew "pinentry-mac"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # Object-relational database system
 brew "postgresql@18", link: true
 # Implementation of Telnet and SSH
@@ -83,18 +85,30 @@ brew "python@3.10"
 brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # CLI proxy to minimize LLM token consumption
 brew "rtk"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Text interface for Git repositories
 brew "tig"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Vault
-brew "hashicorp/tap/vault"
+brew "hashicorp/tap/vault", trusted: true
 # Headless browser for AI agents and automation
 brew "lightpanda-io/browser/lightpanda", trusted: true
 # Sound effects and desktop notifications for AI coding agents
@@ -127,14 +141,15 @@ cask "contexts"
 cask "db-browser-for-sqlite"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Utility for customizing which browser to start
 cask "finicky"
+cask "font-cascadia-code-nf"
 cask "font-fira-code"
 cask "font-monaspace"
 # Web browser
 cask "google-chrome"
-# Utility to hide menu bar items
-cask "hiddenbar"
 # Homebrew's official GUI
 cask "homebrew-app"
 # Free and open-source media player
@@ -147,8 +162,6 @@ cask "jordanbaird-ice@beta"
 cask "keka"
 # End-to-end encryption software
 cask "keybase"
-# Kubernetes IDE
-cask "lens"
 # Software for Logitech devices
 cask "logi-options+"
 # Markdown editor with live preview and syntax highlighting
@@ -276,8 +289,3 @@ vscode "vscode-icons-team.vscode-icons"
 vscode "wholroyd.jinja"
 vscode "will-stone.plastic"
 vscode "yzhang.markdown-all-in-one"
-npm "@caveman-ai/cli"
-npm "@playwright/cli"
-npm "greptile"
-npm "husky"
-npm "playwriter"

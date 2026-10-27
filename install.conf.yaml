@@ -12,12 +12,12 @@
 
 - link:
     # Personal agent instructions (existing regular files require a manual backup)
-    ~/.codex/AGENTS.md:
-      path: agents/codex/AGENTS.md
-      create: true
-    ~/.claude/CLAUDE.md:
-      path: agents/claude/CLAUDE.md
-      create: true
+    # ~/.codex/AGENTS.md:
+    #   path: agents/codex/AGENTS.md
+    #   create: true
+    # ~/.claude/CLAUDE.md:
+    #   path: agents/claude/CLAUDE.md
+    #   create: true
     # Domain-organized shell files
     ~/.zsh/git.zsh: shell/.zsh/git.zsh
     ~/.zsh/system.zsh: shell/.zsh/system.zsh
@@ -34,6 +34,9 @@
     ~/.zprofile:
       force: true
       path: shell/.zprofile
+    ~/.zshenv:
+      force: true
+      path: shell/.zshenv
     ~/.zshrc:
       force: true
       path: shell/.zshrc
@@ -49,6 +52,19 @@
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
+    # ~/.config apps
+    ~/.config/gh/config.yml:
+      path: config/gh/config.yml
+      create: true
+    ~/.config/mise/config.toml:
+      path: config/mise/config.toml
+      create: true
+    ~/.config/mole/whitelist:
+      path: config/mole/whitelist
+      create: true
+    ~/.config/zed/settings.json:
+      path: config/zed/settings.json
+      create: true
     # # VSC
     # "~/Library/Application Support/Code/User/settings.json":
     #   path: vscode/settings.json

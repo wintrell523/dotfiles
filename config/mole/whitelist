@@ -1,0 +1,21 @@
+# Mole Whitelist - Protected paths won't be deleted
+# Default protections: Playwright browsers, Ollama models, Surge Mac, R renv, Finder metadata
+# Add one pattern per line to keep items safe.
+
+~/.gradle/daemon/*
+~/Library/Caches/org.R-project.R/R/renv/*
+~/Library/Caches/tealdeer/tldr-pages
+~/Library/Caches/ms-playwright*
+~/.ollama/models/*
+~/Library/Caches/com.nssurge.surge-mac/*
+~/Library/Application Support/com.nssurge.surge-mac/*
+FINDER_METADATA
+~/Library/Application Support/Code/Cache/*
+/Users/wintrell/.gradle/caches/*
+/Users/wintrell/Library/Caches/JetBrains*
+/Users/wintrell/Library/Caches/com.jetbrains.toolbox*
+/Users/wintrell/Library/Application Support/JetBrains*
+/Users/wintrell/Library/Caches/com.apple.finder
+/Users/wintrell/Library/Mobile Documents*
+/Users/wintrell/Library/Caches/Cypress*
+~/Library/Caches/antidote
